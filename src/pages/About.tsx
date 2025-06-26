@@ -354,10 +354,10 @@ const About = () => {
               </p>
             </div>
 
-            {/* Image Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-              {/* Row 1 */}
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
+            {/* Image Collage */}
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 lg:gap-4 auto-rows-max">
+              {/* Tall rectangle */}
+              <div className="col-span-2 row-span-2 aspect-[2/3] rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs font-medium">
@@ -369,19 +369,21 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs font-medium">
                     🏛️ Cultural Sites
                   </p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🏛️</div>
+                  <div className="text-2xl md:text-3xl">🏛️</div>
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Wide rectangle */}
+              <div className="col-span-2 md:col-span-3 aspect-[3/1] rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs font-medium">
@@ -389,60 +391,56 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">📺</div>
+                  <div className="text-3xl md:text-4xl">📺</div>
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🌅 Sunrise Views
-                  </p>
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌅 Sunrise</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🌅</div>
+                  <div className="text-2xl md:text-3xl">🌅</div>
                 </div>
               </div>
 
-              {/* Row 2 */}
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    ☕ Coffee Adventures
-                  </p>
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">☕ Coffee</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">☕</div>
+                  <div className="text-2xl md:text-3xl">☕</div>
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Tall rectangle */}
+              <div className="col-span-1 row-span-2 aspect-[1/2] rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🎨 Art Galleries
-                  </p>
+                <div className="absolute bottom-3 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🎨 Art</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🎨</div>
+                  <div className="text-3xl md:text-4xl">🎨</div>
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    📚 Reading Corner
-                  </p>
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">📚 Reading</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">📚</div>
+                  <div className="text-2xl md:text-3xl">📚</div>
                 </div>
               </div>
 
-              <div className="aspect-square rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Wide rectangle */}
+              <div className="col-span-2 aspect-[2/1] rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs font-medium">
@@ -450,54 +448,40 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🏔️</div>
+                  <div className="text-3xl md:text-4xl">🏔️</div>
                 </div>
               </div>
 
-              {/* Row 3 - Hidden on mobile, visible on larger screens */}
-              <div className="hidden md:block aspect-square rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square - Hidden on mobile */}
+              <div className="hidden md:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs font-medium">🌺 Gardens</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🌺</div>
+                  <div className="text-2xl md:text-3xl">🌺</div>
                 </div>
               </div>
 
-              <div className="hidden md:block aspect-square rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square - Hidden on mobile */}
+              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🌊 Beach Days
-                  </p>
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌊 Beach</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🌊</div>
+                  <div className="text-2xl md:text-3xl">🌊</div>
                 </div>
               </div>
 
-              <div className="hidden lg:block aspect-square rounded-xl bg-gradient-to-br from-rose-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+              {/* Square - Hidden on mobile */}
+              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-rose-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🎭 Local Events
-                  </p>
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🎭 Events</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🎭</div>
-                </div>
-              </div>
-
-              <div className="hidden lg:block aspect-square rounded-xl bg-gradient-to-br from-violet-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🎵 Music Festivals
-                  </p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🎵</div>
+                  <div className="text-2xl md:text-3xl">🎭</div>
                 </div>
               </div>
             </div>
