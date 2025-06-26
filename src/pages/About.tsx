@@ -56,24 +56,6 @@ const About = () => {
     },
   ];
 
-  const achievements = [
-    {
-      icon: Award,
-      title: "XR Innovation Award 2023",
-      description: "Best VR Training Application",
-    },
-    {
-      icon: Globe,
-      title: "Global XR Conference Speaker",
-      description: "Keynote on Future of Spatial Computing",
-    },
-    {
-      icon: Code2,
-      title: "Open Source Contributor",
-      description: "WebXR framework development",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -395,7 +377,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">����️</div>
+                  <div className="text-4xl">🏛️</div>
                 </div>
               </div>
 
