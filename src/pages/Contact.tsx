@@ -85,15 +85,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Create mailto link with form data
+    const subject = `Project Inquiry from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || "Not provided"}
+Project Type: ${formData.project || "Not specified"}
 
+Message:
+${formData.message}
+
+---
+This message was sent via himanshipuri.com contact form.
+    `.trim();
+
+    const mailtoLink = `mailto:himanshipuri07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open default email client
+    window.location.href = mailtoLink;
+
+    // Show success message
     toast({
-      title: "Message sent successfully!",
+      title: "Email client opened!",
       description:
-        "Thank you for reaching out. I'll get back to you within 24 hours.",
+        "Your default email application should now be open with the message pre-filled. Please send the email to complete your inquiry.",
     });
 
+    // Reset form
     setFormData({
       name: "",
       email: "",
