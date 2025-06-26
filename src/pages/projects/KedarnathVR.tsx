@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -39,6 +39,8 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 
 const KedarnathVR = () => {
+  const [activeLevel, setActiveLevel] = useState("level1");
+
   const projectDetails = {
     title: "Kedarnath Mythological Story",
     subtitle: "Immersive Spiritual Journey Through Ancient Sacred Tales",
@@ -635,81 +637,96 @@ const KedarnathVR = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">Experience Flow</h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground mb-8">
                 Two immersive levels of spiritual journey
               </p>
-            </div>
 
-            {/* Level 1 */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-semibold mb-8 text-center">
-                <Badge className="text-lg py-2 px-6 bg-orange-400 text-white">
-                  Level 1
-                </Badge>
-                <span className="ml-4">Temple Experience</span>
-              </h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {experienceFlow.level1.map((step, index) => {
-                  const Icon = step.icon;
-                  return (
-                    <Card
-                      key={index}
-                      className="text-center border-border/50 bg-card/50 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300"
-                    >
-                      <CardContent className="p-8">
-                        <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                          <span className="text-xl font-bold text-white">
-                            {step.step}
-                          </span>
-                        </div>
-                        <Icon className="w-8 h-8 text-orange-400 mx-auto mb-4" />
-                        <h4 className="text-lg font-semibold mb-3">
-                          {step.title}
-                        </h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {step.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+              {/* Interactive Level Buttons */}
+              <div className="flex justify-center gap-4 mb-12">
+                <Button
+                  onClick={() => setActiveLevel("level1")}
+                  className={`text-lg py-3 px-8 ${
+                    activeLevel === "level1"
+                      ? "bg-orange-400 text-white hover:bg-orange-500"
+                      : "bg-transparent border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white"
+                  }`}
+                  variant={activeLevel === "level1" ? "default" : "outline"}
+                >
+                  Level 1: Temple Experience
+                </Button>
+                <Button
+                  onClick={() => setActiveLevel("level2")}
+                  className={`text-lg py-3 px-8 ${
+                    activeLevel === "level2"
+                      ? "bg-red-400 text-white hover:bg-red-500"
+                      : "bg-transparent border-red-400 text-red-400 hover:bg-red-400 hover:text-white"
+                  }`}
+                  variant={activeLevel === "level2" ? "default" : "outline"}
+                >
+                  Level 2: Mythological Journey
+                </Button>
               </div>
             </div>
 
-            {/* Level 2 */}
-            <div>
-              <h3 className="text-3xl font-semibold mb-8 text-center">
-                <Badge className="text-lg py-2 px-6 bg-red-400 text-white">
-                  Level 2
-                </Badge>
-                <span className="ml-4">Mythological Journey</span>
-              </h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {experienceFlow.level2.map((step, index) => {
-                  const Icon = step.icon;
-                  return (
-                    <Card
-                      key={index}
-                      className="text-center border-border/50 bg-card/50 backdrop-blur-sm hover:border-red-400/50 transition-all duration-300"
-                    >
-                      <CardContent className="p-8">
-                        <div className="w-16 h-16 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                          <span className="text-xl font-bold text-white">
-                            {step.step}
-                          </span>
-                        </div>
-                        <Icon className="w-8 h-8 text-red-400 mx-auto mb-4" />
-                        <h4 className="text-lg font-semibold mb-3">
-                          {step.title}
-                        </h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {step.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
+            {/* Dynamic Content Based on Active Level */}
+            <div className="transition-all duration-500 ease-in-out">
+              {activeLevel === "level1" && (
+                <div className="grid md:grid-cols-3 gap-8 opacity-100 animate-in slide-in-from-left duration-500">
+                  {experienceFlow.level1.map((step, index) => {
+                    const Icon = step.icon;
+                    return (
+                      <Card
+                        key={index}
+                        className="text-center border-orange-400/50 bg-gradient-to-br from-orange-400/10 to-red-400/10 backdrop-blur-sm hover:border-orange-400 transition-all duration-300 transform hover:scale-105"
+                      >
+                        <CardContent className="p-8">
+                          <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span className="text-xl font-bold text-white">
+                              {step.step}
+                            </span>
+                          </div>
+                          <Icon className="w-8 h-8 text-orange-400 mx-auto mb-4" />
+                          <h4 className="text-lg font-semibold mb-3 text-orange-400">
+                            {step.title}
+                          </h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {step.description}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
+              )}
+
+              {activeLevel === "level2" && (
+                <div className="grid md:grid-cols-3 gap-8 opacity-100 animate-in slide-in-from-right duration-500">
+                  {experienceFlow.level2.map((step, index) => {
+                    const Icon = step.icon;
+                    return (
+                      <Card
+                        key={index}
+                        className="text-center border-red-400/50 bg-gradient-to-br from-red-400/10 to-pink-400/10 backdrop-blur-sm hover:border-red-400 transition-all duration-300 transform hover:scale-105"
+                      >
+                        <CardContent className="p-8">
+                          <div className="w-16 h-16 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span className="text-xl font-bold text-white">
+                              {step.step}
+                            </span>
+                          </div>
+                          <Icon className="w-8 h-8 text-red-400 mx-auto mb-4" />
+                          <h4 className="text-lg font-semibold mb-3 text-red-400">
+                            {step.title}
+                          </h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {step.description}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </div>
