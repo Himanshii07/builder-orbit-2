@@ -148,11 +148,11 @@ const Index = () => {
               return (
                 <Card
                   key={index}
-                  className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300"
+                  className={`group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift animate-fade-in stagger-${index + 1}`}
                 >
                   <CardContent className="p-8">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors">
-                      <Icon className="h-6 w-6 text-xr-neon" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors magnetic">
+                      <Icon className="h-6 w-6 text-xr-neon animate-bounce-subtle" />
                     </div>
 
                     <h3 className="text-xl font-semibold mb-3 group-hover:text-xr-neon transition-colors">
@@ -198,14 +198,21 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {recentProjects.map((project, index) => (
               <Link key={index} to={`/projects/${project.slug}`}>
-                <Card className="group cursor-pointer overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300">
+                <Card
+                  className={`group cursor-pointer overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}
+                >
                   <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-slide-up">
                       <span className="text-xs font-medium text-xr-neon bg-xr-neon/10 px-2 py-1 rounded">
                         {project.category}
                       </span>
                     </div>
+                    {/* Add floating element */}
+                    <div
+                      className="absolute top-4 right-4 w-8 h-8 bg-xr-cyber/20 rounded-full blur animate-float"
+                      style={{ animationDelay: `${index * 0.5}s` }}
+                    />
                   </div>
 
                   <CardContent className="p-6">

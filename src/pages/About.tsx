@@ -35,25 +35,24 @@ const About = () => {
 
   const experiences = [
     {
-      year: "2023 - Present",
-      role: "Senior XR Designer",
-      company: "Immersive Studios",
-      description:
-        "Leading XR experience design for enterprise and entertainment clients, focusing on VR training simulations and AR marketing campaigns.",
+      year: "2024 - 2026",
+      role: "M.des Immersive Media Design",
+      company: "MIT ADT, Pune",
+      description: "From MIT ADT, Pune. In this I learned about XR.",
     },
     {
-      year: "2024 - 2026",
-      role: "M.Des Immersive Media Design",
-      company: "MIT ADT, Pune",
+      year: "2023 - 2024",
+      role: "UI/UX Freelancer",
+      company: "Various Companies",
       description:
-        "Developed innovative AR applications for retail and education sectors, creating intuitive user interfaces for spatial computing.",
+        "I learned ui/ux from youtube and self learned then i did some freelancing work where I used to design websites for different companies on wordpress, framer, wix, webflow.",
     },
     {
       year: "2020 - 2023",
       role: "Bcom Programme",
       company: "Mata Sundri College, Delhi University",
       description:
-        "Created stunning 3D visualizations and interactive experiences for architectural and product design presentations.",
+        "Business and commerce education providing a strong foundation for understanding project management and client relations.",
     },
   ];
 
@@ -113,10 +112,8 @@ const About = () => {
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  When I'm not designing the future of human-computer
-                  interaction, you'll find me exploring the latest in spatial
-                  computing, contributing to open-source XR frameworks, or
-                  sharing knowledge at tech conferences around the world.
+                  My interests are learning new design trends and investing in
+                  the stock market.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -355,134 +352,111 @@ const About = () => {
               </p>
             </div>
 
-            {/* Image Collage */}
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 lg:gap-4 auto-rows-max">
-              {/* Tall rectangle */}
-              <div className="col-span-2 row-span-2 aspect-[2/3] rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🌿 Nature Walks
-                  </p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-4xl">🌲</div>
-                </div>
-              </div>
+            {/* Image Collage - Fixed Rectangle Grid */}
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="h-96 border border-border/20 rounded-2xl overflow-hidden p-2 bg-muted/10">
+                <div className="grid grid-cols-6 grid-rows-4 gap-2 h-full">
+                  {/* Tall rectangle */}
+                  <div className="col-span-2 row-span-4 rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🌿 Nature Walks
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-4xl">🌲</div>
+                    </div>
+                  </div>
 
-              {/* Square */}
-              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🏛️ Cultural Sites
-                  </p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">🏛️</div>
-                </div>
-              </div>
+                  {/* Square */}
+                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🏛️ Cultural Sites
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">🏛️</div>
+                    </div>
+                  </div>
 
-              {/* Wide rectangle */}
-              <div className="col-span-2 md:col-span-3 aspect-[3/1] rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    📺 Netflix & Chill
-                  </p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-3xl md:text-4xl">📺</div>
-                </div>
-              </div>
+                  {/* Wide rectangle */}
+                  <div className="col-span-3 row-span-1 rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        📺 Netflix & Chill
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">📺</div>
+                    </div>
+                  </div>
 
-              {/* Square */}
-              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">🌅 Sunrise</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">🌅</div>
-                </div>
-              </div>
+                  {/* Square */}
+                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🌅 Sunrise
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">🌅</div>
+                    </div>
+                  </div>
 
-              {/* Square */}
-              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">☕ Coffee</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">☕</div>
-                </div>
-              </div>
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        ☕ Coffee
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">☕</div>
+                    </div>
+                  </div>
 
-              {/* Tall rectangle */}
-              <div className="col-span-1 row-span-2 aspect-[1/2] rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">🎨 Art</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-3xl md:text-4xl">🎨</div>
-                </div>
-              </div>
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">🎨 Art</p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">🎨</div>
+                    </div>
+                  </div>
 
-              {/* Square */}
-              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">📚 Reading</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">📚</div>
-                </div>
-              </div>
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        📚 Reading
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">📚</div>
+                    </div>
+                  </div>
 
-              {/* Wide rectangle */}
-              <div className="col-span-2 aspect-[2/1] rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">
-                    🏔️ Mountain Trails
-                  </p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-3xl md:text-4xl">🏔️</div>
-                </div>
-              </div>
-
-              {/* Square - Hidden on mobile */}
-              <div className="hidden md:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">🌺 Gardens</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">🌺</div>
-                </div>
-              </div>
-
-              {/* Square - Hidden on mobile */}
-              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">🌊 Beach</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">🌊</div>
-                </div>
-              </div>
-
-              {/* Square - Hidden on mobile */}
-              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-rose-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-medium">🎭 Events</p>
-                </div>
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-2xl md:text-3xl">🎭</div>
+                  {/* Wide rectangle */}
+                  <div className="col-span-2 row-span-1 rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🏔️ Mountain Trails
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">🏔️</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -500,6 +474,46 @@ const About = () => {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Illustrations Section */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                My Illustrations
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Creative artwork and digital illustrations
+              </p>
+            </div>
+
+            {/* Illustration Grid - Space for images to be added */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <Card
+                  key={item}
+                  className="group aspect-square border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer"
+                >
+                  <CardContent className="p-4 h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 rounded-full bg-xr-neon/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-xr-neon/20 transition-colors">
+                        <Palette className="w-8 h-8 text-xr-neon" />
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Illustration {item}
+                      </p>
+                      <p className="text-xs text-muted-foreground/70 mt-1">
+                        Space for artwork
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

@@ -38,32 +38,35 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-cyber-pulse transition-all">
-                <span className="font-bold text-sm text-black">HP</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-pulse-glow transition-all magnetic">
+                <span className="font-bold text-sm text-black animate-fade-in">
+                  HP
+                </span>
               </div>
-              <span className="font-display font-bold text-lg text-foreground group-hover:text-xr-neon transition-colors">
+              <span className="font-display font-bold text-lg text-foreground group-hover:text-xr-neon transition-colors animate-slide-in-left">
                 Himanshi Puri
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => {
+              {navItems.map((item, index) => {
                 const isActive = location.pathname === item.path;
                 return (
                   <Link
                     key={item.path}
                     to={item.path}
                     className={cn(
-                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 group",
+                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 group hover-scale animate-slide-in-right",
                       isActive
                         ? "text-xr-neon"
                         : "text-muted-foreground hover:text-foreground",
+                      `stagger-${index + 1}`,
                     )}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent" />
+                      <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent animate-shimmer" />
                     )}
                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
                   </Link>
