@@ -10,7 +10,7 @@ import {
   Play,
   Heart,
   Mountain,
-  Temple,
+  Building2,
   BookOpen,
   Sparkles,
   Star,
@@ -95,7 +95,7 @@ const KedarnathVR = () => {
         step: "02",
         title: "Exploring the Temple",
         description: "Discover intricate architecture and sacred spaces within",
-        icon: Temple,
+        icon: Building2,
       },
       {
         step: "03",
@@ -121,7 +121,7 @@ const KedarnathVR = () => {
         step: "03",
         title: "Returning to the Temple",
         description: "Complete the spiritual circle back to the sacred space",
-        icon: Temple,
+        icon: Building2,
       },
     ],
   };
@@ -290,7 +290,7 @@ const KedarnathVR = () => {
             {/* Project Header */}
             <div className="text-center mb-20">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-orange-400/10 to-red-400/10 border border-orange-400/20 mb-8">
-                <Temple className="w-5 h-5 mr-3 text-orange-400" />
+                <Building2 className="w-5 h-5 mr-3 text-orange-400" />
                 <span className="text-base font-medium text-orange-400">
                   Main Project • Cultural Heritage VR
                 </span>
@@ -484,7 +484,7 @@ const KedarnathVR = () => {
                   {
                     title: "Cultural Awareness",
                     desc: "Educates users about Indian mythology, rituals, and temple architecture in a way that feels real and respectful",
-                    icon: Temple,
+                    icon: Building2,
                   },
                   {
                     title: "Interactive Learning",
