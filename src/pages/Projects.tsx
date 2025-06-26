@@ -125,6 +125,34 @@ const Projects = () => {
         live: "#",
       },
     },
+    {
+      id: 5,
+      title: "Unreal Cinematic Challenge",
+      category: "3d-art",
+      categoryLabel: "Cinematic Design",
+      description:
+        "A dark, atmospheric castle environment designed around fixed cinematic camera movements, featuring gothic architecture, moody lighting, and a warrior character narrative.",
+      longDescription:
+        "An extracurricular exploration beyond coursework, this Unreal Engine challenge involved creating a 3D environment around predetermined camera sequences. I designed a dark castle with gothic architecture, dramatic lighting, and replaced the original character with a warrior figure to enhance the mysterious, battle-worn storyline.",
+      image: "/placeholder.svg",
+      tags: [
+        "Unreal Engine 5",
+        "Environment Design",
+        "Cinematic Lighting",
+        "Gothic Architecture",
+        "Character Integration",
+      ],
+      featured: true,
+      year: "2023",
+      client: "Personal Challenge",
+      duration: "4 weeks",
+      slug: "unreal-cinematic",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
   ];
 
   const filters = [

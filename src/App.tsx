@@ -11,6 +11,7 @@ import KedarnathVR from "./pages/projects/KedarnathVR";
 import Savey from "./pages/projects/Savey";
 import ShootingRange from "./pages/projects/ShootingRange";
 import MushroomHouse from "./pages/projects/MushroomHouse";
+import UnrealCinematic from "./pages/projects/UnrealCinematic";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,10 @@ const App = () => (
           <Route path="/projects/savey" element={<Savey />} />
           <Route path="/projects/shooting-range" element={<ShootingRange />} />
           <Route path="/projects/mushroom-house" element={<MushroomHouse />} />
+          <Route
+            path="/projects/unreal-cinematic"
+            element={<UnrealCinematic />}
+          />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
