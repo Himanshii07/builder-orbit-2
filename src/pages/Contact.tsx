@@ -207,24 +207,6 @@ This message was sent via himanshipuri.com contact form.
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="project">Project Type</Label>
-                        <select
-                          id="project"
-                          name="project"
-                          value={formData.project}
-                          onChange={handleInputChange}
-                          className="w-full px-3 py-2 rounded-md border border-border/50 bg-background text-foreground focus:border-xr-neon focus:outline-none focus:ring-1 focus:ring-xr-neon"
-                        >
-                          <option value="">Select project type</option>
-                          {projectTypes.map((type) => (
-                            <option key={type} value={type}>
-                              {type}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div className="space-y-2">
                         <Label htmlFor="message">Message *</Label>
                         <Textarea
                           id="message"

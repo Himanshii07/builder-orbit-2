@@ -460,11 +460,14 @@ const Projects = () => {
           </p>
 
           <Button
+            asChild
             size="lg"
             className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80"
           >
-            Start a Conversation
-            <ExternalLink className="ml-2 h-4 w-4" />
+            <a href="mailto:himanshipuri07@gmail.com">
+              Start a Conversation
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
           </Button>
         </div>
       </section>

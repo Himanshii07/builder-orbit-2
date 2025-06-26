@@ -35,25 +35,25 @@ const About = () => {
 
   const experiences = [
     {
-      year: "2023 - Present",
-      role: "Senior XR Designer",
-      company: "Immersive Studios",
-      description:
-        "Leading XR experience design for enterprise and entertainment clients, focusing on VR training simulations and AR marketing campaigns.",
-    },
-    {
       year: "2024 - 2026",
-      role: "M.Des Immersive Media Design",
+      role: "M.des Immersive Media Design",
       company: "MIT ADT, Pune",
       description:
-        "Developed innovative AR applications for retail and education sectors, creating intuitive user interfaces for spatial computing.",
+        "From MIT ADT, Pune. In this I learned about XR.",
+    },
+    {
+      year: "2023 - 2024",
+      role: "UI/UX Freelancer",
+      company: "Various Companies",
+      description:
+        "I learned ui/ux from youtube and self learned then i did some freelancing work where I used to design websites for different companies on wordpress, framer, wix, webflow.",
     },
     {
       year: "2020 - 2023",
       role: "Bcom Programme",
       company: "Mata Sundri College, Delhi University",
       description:
-        "Created stunning 3D visualizations and interactive experiences for architectural and product design presentations.",
+        "Business and commerce education providing a strong foundation for understanding project management and client relations.",
     },
   ];
 
@@ -113,10 +113,7 @@ const About = () => {
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  When I'm not designing the future of human-computer
-                  interaction, you'll find me exploring the latest in spatial
-                  computing, contributing to open-source XR frameworks, or
-                  sharing knowledge at tech conferences around the world.
+                  My interests are learning new design trends and investing in the stock market.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -134,6 +131,7 @@ const About = () => {
                   </Button>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -356,7 +354,8 @@ const About = () => {
             </div>
 
             {/* Image Collage */}
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 lg:gap-4 auto-rows-max">
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 auto-rows-max">
               {/* Tall rectangle */}
               <div className="col-span-2 row-span-2 aspect-[2/3] rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
