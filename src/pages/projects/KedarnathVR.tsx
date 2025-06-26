@@ -32,6 +32,8 @@ import {
   TestTube,
   Headphones,
   Quote,
+  ChevronRight,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -825,7 +827,7 @@ const KedarnathVR = () => {
       {/* Development Process */}
       <section className="py-24 bg-gradient-to-r from-orange-900/10 via-background to-red-900/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">Development Process</h2>
               <p className="text-xl text-muted-foreground">
@@ -834,28 +836,58 @@ const KedarnathVR = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {developmentProcess.map((process, index) => {
-                const Icon = process.icon;
-                return (
-                  <Card
-                    key={index}
-                    className="text-center border-border/50 bg-card/50 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-8">
-                      <div className="w-12 h-12 bg-orange-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Icon className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <h3 className="text-lg font-semibold mb-3 text-orange-400">
-                        {process.phase}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {process.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+            <div className="relative">
+              {/* Process Flow with Arrows */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                {developmentProcess.map((process, index) => {
+                  const Icon = process.icon;
+                  const isLastItem = index === developmentProcess.length - 1;
+
+                  return (
+                    <div key={index} className="relative">
+                      <Card className="text-center border-border/50 bg-card/50 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300 transform hover:scale-105 h-full">
+                        <CardContent className="p-6">
+                          <div className="flex flex-col items-center h-full">
+                            <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                              <Icon className="w-8 h-8 text-white" />
+                            </div>
+                            <div className="bg-orange-400/10 rounded-full px-3 py-1 mb-4">
+                              <span className="text-xs font-bold text-orange-400">
+                                PHASE {index + 1}
+                              </span>
+                            </div>
+                            <h3 className="text-lg font-semibold mb-3 text-orange-400">
+                              {process.phase}
+                            </h3>
+                            <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                              {process.description}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+
+                      {/* Arrow between cards - only show on larger screens and not on last item */}
+                      {!isLastItem && (
+                        <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                          <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center shadow-lg">
+                            <ChevronRight className="w-5 h-5 text-white" />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Mobile Arrow Flow */}
+              <div className="lg:hidden mt-8 flex justify-center">
+                <div className="flex items-center space-x-2">
+                  <span className="text-orange-400 text-sm font-medium">
+                    Process Flow
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-orange-400" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
