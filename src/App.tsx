@@ -13,6 +13,7 @@ import ShootingRange from "./pages/projects/ShootingRange";
 import MushroomHouse from "./pages/projects/MushroomHouse";
 import UnrealCinematic from "./pages/projects/UnrealCinematic";
 import StormyOcean from "./pages/projects/StormyOcean";
+import SmartChemistry from "./pages/projects/SmartChemistry";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,10 @@ const App = () => (
             element={<UnrealCinematic />}
           />
           <Route path="/projects/stormy-ocean" element={<StormyOcean />} />
+          <Route
+            path="/projects/smart-chemistry"
+            element={<SmartChemistry />}
+          />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

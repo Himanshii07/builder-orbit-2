@@ -182,6 +182,35 @@ const Projects = () => {
         live: "#",
       },
     },
+    {
+      id: 7,
+      title: "Smart Chemistry",
+      category: "interactive",
+      categoryLabel: "Interactive Design",
+      description:
+        "An AI-powered educational tool using color-coded element cards and image recognition to make chemistry interactive and fun for students. Real-time compound identification with instant feedback.",
+      longDescription:
+        "To make chemistry more interactive and fun for students, we designed an AI-powered educational tool using color-coded element cards. Each card represents a chemical element, and students can arrange them to form compounds. Using image recognition, the tool instantly identifies the compound and gives real-time feedback. This hands-on approach helps students visualize and understand chemical combinations better.",
+      image: "/placeholder.svg",
+      tags: [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Image Recognition",
+        "Educational Technology",
+        "Computer Vision",
+        "Group Project",
+      ],
+      featured: true,
+      year: "2023",
+      client: "Educational Innovation",
+      duration: "1 Week",
+      slug: "smart-chemistry",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
   ];
 
   const filters = [
