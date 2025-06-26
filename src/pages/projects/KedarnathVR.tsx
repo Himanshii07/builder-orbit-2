@@ -40,7 +40,7 @@ import Navigation from "@/components/Navigation";
 
 const KedarnathVR = () => {
   const projectDetails = {
-    title: "Kedarnath Mythological Story in VR",
+    title: "Kedarnath Mythological Story",
     subtitle: "Immersive Spiritual Journey Through Ancient Sacred Tales",
     duration: "2 months",
     year: "2025",
@@ -304,21 +304,6 @@ const KedarnathVR = () => {
                 {projectDetails.subtitle}
               </p>
 
-              {/* Key Quote */}
-              <div className="max-w-4xl mx-auto mb-8">
-                <Card className="border-orange-400/30 bg-gradient-to-r from-orange-400/5 to-red-400/5">
-                  <CardContent className="p-8">
-                    <Quote className="w-8 h-8 text-orange-400 mb-4 mx-auto" />
-                    <p className="text-xl font-medium text-center italic mb-4">
-                      "Story from the past, but as an experience in the present"
-                    </p>
-                    <p className="text-lg text-center font-medium text-orange-400">
-                      "Because Faith is fading under fame."
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <Badge
                   variant="outline"
@@ -464,6 +449,18 @@ const KedarnathVR = () => {
               </Card>
             </div>
 
+            {/* Key Statement */}
+            <div className="mt-20 mb-16">
+              <Card className="border-orange-400/30 bg-gradient-to-r from-orange-400/5 to-red-400/5 max-w-4xl mx-auto">
+                <CardContent className="p-8">
+                  <Quote className="w-8 h-8 text-orange-400 mb-4 mx-auto" />
+                  <p className="text-2xl font-medium text-center italic text-orange-400">
+                    "Story from the past, but as an experience in the present"
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* Why This Experience Matters */}
             <div className="mt-20">
               <h3 className="text-3xl font-bold text-center mb-12">
@@ -548,10 +545,15 @@ const KedarnathVR = () => {
               </p>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 mb-8">
               <Card className="border-red-400/30 bg-gradient-to-r from-red-400/5 to-orange-400/5">
                 <CardContent className="p-8">
-                  <p className="text-xl font-medium text-center mb-4">
+                  <Quote className="w-6 h-6 text-red-400 mb-4 mx-auto" />
+                  <p className="text-xl font-medium text-center text-red-400 mb-6">
+                    "Because Faith is fading under fame."
+                  </p>
+                  <hr className="border-red-400/20 mb-6" />
+                  <p className="text-lg font-medium text-center mb-4">
                     Video Available:
                   </p>
                   <p className="text-lg text-center text-red-400 font-semibold">
