@@ -6,6 +6,16 @@ import {
   Globe,
   Headphones,
   Code2,
+  Palette,
+  Users,
+  Lightbulb,
+  Target,
+  Layers,
+  Gamepad2,
+  Settings,
+  Brain,
+  Briefcase,
+  GitBranch,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -146,7 +156,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Technical Skills Section */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -173,6 +183,132 @@ const About = () => {
                   <Progress value={skill.level} className="h-2" />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Competencies Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Core Competencies
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Key skills and expertise areas that drive innovative solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "XR Interaction Design",
+                  description:
+                    "Creating intuitive and immersive user interactions in virtual and augmented reality environments",
+                  icon: Headphones,
+                  color: "blue",
+                },
+                {
+                  title: "Prototyping",
+                  description:
+                    "Rapid iteration and testing of concepts to validate design decisions and user experiences",
+                  icon: Settings,
+                  color: "green",
+                },
+                {
+                  title: "User Experience",
+                  description:
+                    "Designing human-centered experiences that prioritize usability and emotional engagement",
+                  icon: Users,
+                  color: "purple",
+                },
+                {
+                  title: "Spatial Design",
+                  description:
+                    "Understanding and designing for three-dimensional spaces and spatial relationships",
+                  icon: Layers,
+                  color: "orange",
+                },
+                {
+                  title: "3D Modeling",
+                  description:
+                    "Creating detailed 3D assets and environments for immersive experiences",
+                  icon: Palette,
+                  color: "pink",
+                },
+                {
+                  title: "Game Design and Development",
+                  description:
+                    "Building interactive experiences with engaging mechanics and compelling narratives",
+                  icon: Gamepad2,
+                  color: "cyan",
+                },
+                {
+                  title: "Systems Thinking",
+                  description:
+                    "Analyzing complex problems and understanding interconnected relationships",
+                  icon: GitBranch,
+                  color: "red",
+                },
+                {
+                  title: "Creative Thinking",
+                  description:
+                    "Generating innovative solutions and pushing boundaries of what's possible",
+                  icon: Lightbulb,
+                  color: "yellow",
+                },
+                {
+                  title: "Product Strategy",
+                  description:
+                    "Aligning design decisions with business goals and user needs",
+                  icon: Target,
+                  color: "indigo",
+                },
+                {
+                  title: "Project Management",
+                  description:
+                    "Leading projects from conception to completion with efficient planning and execution",
+                  icon: Briefcase,
+                  color: "teal",
+                },
+                {
+                  title: "Cross-Functional Team Building",
+                  description:
+                    "Collaborating effectively across disciplines to achieve shared objectives",
+                  icon: Users,
+                  color: "emerald",
+                },
+              ].map((competency, index) => {
+                const Icon = competency.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="group border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div
+                          className={`w-12 h-12 bg-${competency.color}-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${competency.color}-400/20 transition-colors`}
+                        >
+                          <Icon
+                            className={`w-6 h-6 text-${competency.color}-400 group-hover:text-${competency.color}-500`}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold mb-2 group-hover:text-xr-neon transition-colors">
+                            {competency.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {competency.description}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>
