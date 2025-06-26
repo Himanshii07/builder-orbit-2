@@ -350,6 +350,81 @@ const About = () => {
                 I can often be found exploring the world around me, seeking
                 inspiration from nature, culture and watching Netflix
               </p>
+
+              {/* New Image Gallery Sections */}
+              {/* First Row: 4 Equal Columns */}
+              <div className="flex flex-col relative mt-5">
+                <div className="gap-5 flex lg:flex-row flex-col lg:gap-5 gap-0">
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/4 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073"
+                      className="aspect-[0.63] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/4 lg:ml-5 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660"
+                      className="aspect-[0.63] object-cover object-center w-full mt-5 min-h-96 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/4 lg:ml-5 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2"
+                      className="aspect-[0.64] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/4 lg:ml-5 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367"
+                      className="aspect-[0.63] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Row: 67% and 33% */}
+              <div className="flex flex-col relative mt-5">
+                <div className="gap-5 flex lg:flex-row flex-col lg:gap-5 gap-0">
+                  <div className="flex flex-col line-height-normal w-full lg:w-2/3 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3"
+                      className="aspect-[1.33] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/3 lg:ml-5 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945"
+                      className="aspect-[0.67] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Third Row: 33% and 67% */}
+              <div className="flex flex-col relative mt-5">
+                <div className="gap-5 flex lg:flex-row flex-col lg:gap-5 gap-0">
+                  <div className="flex flex-col line-height-normal w-full lg:w-1/3 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783"
+                      className="aspect-[0.66] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col line-height-normal w-full lg:w-2/3 lg:ml-5 ml-0">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123"
+                      className="aspect-[1.33] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Image Collage - Fixed Rectangle Grid */}
