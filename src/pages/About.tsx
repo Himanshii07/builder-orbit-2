@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const About = () => {
   const skills = [
@@ -503,6 +504,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

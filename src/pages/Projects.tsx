@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -467,6 +468,8 @@ const Projects = () => {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

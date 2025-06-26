@@ -4,6 +4,7 @@ import { ArrowRight, Play, Eye, Zap, Layers3, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const features = [
@@ -245,6 +246,8 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

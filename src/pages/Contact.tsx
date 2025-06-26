@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -310,8 +311,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
-
 export default Contact;
