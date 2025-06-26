@@ -29,8 +29,8 @@ const UnrealCinematic = () => {
   const projectDetails = {
     title: "Unreal Cinematic Challenge",
     subtitle: "Dark Atmospheric Castle Environment with Fixed Camera Sequence",
-    duration: "4 weeks",
-    year: "2023",
+    duration: "1 day",
+    year: "2025",
     client: "Personal Challenge",
     team: "Solo Artist",
     role: "Environment Designer & Lighting Artist",

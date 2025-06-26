@@ -30,8 +30,8 @@ const MushroomHouse = () => {
   const projectDetails = {
     title: "The Mushroom House",
     subtitle: "A Fantasy 3D Environment Showcasing Complete Pipeline Mastery",
-    duration: "Individual Project",
-    year: "2023",
+    duration: "2 weeks",
+    year: "2025",
     client: "3D Art Portfolio",
     team: "Solo Artist",
     role: "3D Artist & Environment Designer",
