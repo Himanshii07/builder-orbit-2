@@ -39,10 +39,10 @@ const Navigation = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
               <div className="w-8 h-8 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-cyber-pulse transition-all">
-                <span className="font-bold text-sm text-black">XR</span>
+                <span className="font-bold text-sm text-black">HP</span>
               </div>
               <span className="font-display font-bold text-lg text-foreground group-hover:text-xr-neon transition-colors">
-                Designer
+                Himanshi Puri
               </span>
             </Link>
 

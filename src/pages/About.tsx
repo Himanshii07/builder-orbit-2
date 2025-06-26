@@ -6,20 +6,31 @@ import {
   Globe,
   Headphones,
   Code2,
+  Palette,
+  Users,
+  Lightbulb,
+  Target,
+  Layers,
+  Gamepad2,
+  Settings,
+  Brain,
+  Briefcase,
+  GitBranch,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const About = () => {
   const skills = [
     { name: "Unreal Engine 5", level: 95 },
     { name: "Unity 3D", level: 88 },
     { name: "Blender", level: 92 },
-    { name: "C# Programming", level: 85 },
+    { name: "Touch Design", level: 85 },
     { name: "UX/UI Design", level: 90 },
-    { name: "WebXR", level: 82 },
+    { name: "Maya", level: 82 },
   ];
 
   const experiences = [
@@ -43,24 +54,6 @@ const About = () => {
       company: "Mata Sundri College, Delhi University",
       description:
         "Created stunning 3D visualizations and interactive experiences for architectural and product design presentations.",
-    },
-  ];
-
-  const achievements = [
-    {
-      icon: Award,
-      title: "XR Innovation Award 2023",
-      description: "Best VR Training Application",
-    },
-    {
-      icon: Globe,
-      title: "Global XR Conference Speaker",
-      description: "Keynote on Future of Spatial Computing",
-    },
-    {
-      icon: Code2,
-      title: "Open Source Contributor",
-      description: "WebXR framework development",
     },
   ];
 
@@ -107,11 +100,16 @@ const About = () => {
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  I'm a passionate XR designer with over 5 years of experience
-                  creating immersive digital experiences. My work spans across
-                  virtual reality, augmented reality, and mixed reality
-                  applications, with a focus on user-centered design and
-                  cutting-edge technology.
+                  I'm a passionate XR designer creating immersive digital
+                  experiences. My work spans across virtual reality, augmented
+                  reality, and mixed reality applications, with a focus on
+                  user-centered design and cutting-edge technology.
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  I'm skilled at solving complex problems through thoughtful
+                  design, integrating everyone's insights to find shared
+                  solutions, from strategy to refining user experiences.
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -141,7 +139,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Technical Skills Section */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -168,6 +166,132 @@ const About = () => {
                   <Progress value={skill.level} className="h-2" />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Competencies Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Core Competencies
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Key skills and expertise areas that drive innovative solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "XR Interaction Design",
+                  description:
+                    "Creating intuitive and immersive user interactions in virtual and augmented reality environments",
+                  icon: Headphones,
+                  color: "blue",
+                },
+                {
+                  title: "Prototyping",
+                  description:
+                    "Rapid iteration and testing of concepts to validate design decisions and user experiences",
+                  icon: Settings,
+                  color: "green",
+                },
+                {
+                  title: "User Experience",
+                  description:
+                    "Designing human-centered experiences that prioritize usability and emotional engagement",
+                  icon: Users,
+                  color: "purple",
+                },
+                {
+                  title: "Spatial Design",
+                  description:
+                    "Understanding and designing for three-dimensional spaces and spatial relationships",
+                  icon: Layers,
+                  color: "orange",
+                },
+                {
+                  title: "3D Modeling",
+                  description:
+                    "Creating detailed 3D assets and environments for immersive experiences",
+                  icon: Palette,
+                  color: "pink",
+                },
+                {
+                  title: "Game Design and Development",
+                  description:
+                    "Building interactive experiences with engaging mechanics and compelling narratives",
+                  icon: Gamepad2,
+                  color: "cyan",
+                },
+                {
+                  title: "Systems Thinking",
+                  description:
+                    "Analyzing complex problems and understanding interconnected relationships",
+                  icon: GitBranch,
+                  color: "red",
+                },
+                {
+                  title: "Creative Thinking",
+                  description:
+                    "Generating innovative solutions and pushing boundaries of what's possible",
+                  icon: Lightbulb,
+                  color: "yellow",
+                },
+                {
+                  title: "Product Strategy",
+                  description:
+                    "Aligning design decisions with business goals and user needs",
+                  icon: Target,
+                  color: "indigo",
+                },
+                {
+                  title: "Project Management",
+                  description:
+                    "Leading projects from conception to completion with efficient planning and execution",
+                  icon: Briefcase,
+                  color: "teal",
+                },
+                {
+                  title: "Cross-Functional Team Building",
+                  description:
+                    "Collaborating effectively across disciplines to achieve shared objectives",
+                  icon: Users,
+                  color: "emerald",
+                },
+              ].map((competency, index) => {
+                const Icon = competency.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="group border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div
+                          className={`w-12 h-12 bg-${competency.color}-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${competency.color}-400/20 transition-colors`}
+                        >
+                          <Icon
+                            className={`w-6 h-6 text-${competency.color}-400 group-hover:text-${competency.color}-500`}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold mb-2 group-hover:text-xr-neon transition-colors">
+                            {competency.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {competency.description}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -217,47 +341,171 @@ const About = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      {/* When I'm Not Working Section */}
       <section className="py-24 bg-gradient-to-r from-xr-neon/5 via-background to-xr-cyber/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Achievements & Recognition
+                When I am not glued to my laptop for work
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Milestones in my XR design career
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                I can often be found exploring the world around me, seeking
+                inspiration from nature, culture and watching Netflix
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                return (
-                  <Card
-                    key={index}
-                    className="text-center group border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-8">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors">
-                        <Icon className="h-8 w-8 text-xr-neon" />
-                      </div>
+            {/* Image Collage */}
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 lg:gap-4 auto-rows-max">
+              {/* Tall rectangle */}
+              <div className="col-span-2 row-span-2 aspect-[2/3] rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🌿 Nature Walks
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🌲</div>
+                </div>
+              </div>
 
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-xr-neon transition-colors">
-                        {achievement.title}
-                      </h3>
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🏛️ Cultural Sites
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">🏛️</div>
+                </div>
+              </div>
 
-                      <p className="text-muted-foreground text-sm">
-                        {achievement.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+              {/* Wide rectangle */}
+              <div className="col-span-2 md:col-span-3 aspect-[3/1] rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    📺 Netflix & Chill
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-3xl md:text-4xl">📺</div>
+                </div>
+              </div>
+
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌅 Sunrise</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">🌅</div>
+                </div>
+              </div>
+
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">☕ Coffee</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">☕</div>
+                </div>
+              </div>
+
+              {/* Tall rectangle */}
+              <div className="col-span-1 row-span-2 aspect-[1/2] rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🎨 Art</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-3xl md:text-4xl">🎨</div>
+                </div>
+              </div>
+
+              {/* Square */}
+              <div className="col-span-1 aspect-square rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">📚 Reading</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">📚</div>
+                </div>
+              </div>
+
+              {/* Wide rectangle */}
+              <div className="col-span-2 aspect-[2/1] rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🏔️ Mountain Trails
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-3xl md:text-4xl">🏔️</div>
+                </div>
+              </div>
+
+              {/* Square - Hidden on mobile */}
+              <div className="hidden md:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌺 Gardens</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">🌺</div>
+                </div>
+              </div>
+
+              {/* Square - Hidden on mobile */}
+              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌊 Beach</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">🌊</div>
+                </div>
+              </div>
+
+              {/* Square - Hidden on mobile */}
+              <div className="hidden lg:block col-span-1 aspect-square rounded-xl bg-gradient-to-br from-rose-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🎭 Events</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-2xl md:text-3xl">🎭</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Fun Note */}
+            <div className="mt-12 text-center">
+              <Card className="border-xr-neon/30 bg-gradient-to-r from-xr-neon/5 to-xr-cyber/5 max-w-2xl mx-auto">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground italic">
+                    "Inspiration strikes when you least expect it - sometimes
+                    during a Netflix binge, sometimes while hiking through
+                    nature, and often when experiencing different cultures.
+                    These moments away from the screen fuel my creativity and
+                    bring fresh perspectives to my work."
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

@@ -32,7 +32,7 @@ const StormyOcean = () => {
     subtitle:
       "A Blender Learning Journey into Ocean Simulation and Atmospheric Rendering",
     duration: "One Day Project",
-    year: "2023",
+    year: "2025",
     client: "Personal Learning",
     team: "Solo Artist",
     role: "3D Artist & Learner",

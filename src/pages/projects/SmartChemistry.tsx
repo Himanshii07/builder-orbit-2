@@ -37,7 +37,7 @@ const SmartChemistry = () => {
     title: "Smart Chemistry",
     subtitle: "AI-Powered Educational Tool for Interactive Chemistry Learning",
     duration: "1 Week",
-    year: "2023",
+    year: "2025",
     client: "Educational Innovation Project",
     team: "2 Members",
     role: "AI Developer & Designer",
@@ -379,33 +379,28 @@ const SmartChemistry = () => {
               </p>
             </div>
 
-            <div className="space-y-12">
+            <div className="grid gap-8">
               {developmentSteps.map((step, index) => {
                 const Icon = step.icon;
-                const isEven = index % 2 === 0;
                 return (
-                  <div
+                  <Card
                     key={index}
-                    className={`flex items-center gap-8 ${
-                      isEven ? "flex-row" : "flex-row-reverse"
-                    }`}
+                    className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-400/50 transition-all duration-300"
                   >
-                    <div className="flex-1">
-                      <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-400/50 transition-all duration-300">
-                        <CardContent className="p-8">
-                          <div className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center mr-4">
-                              <Icon className="w-6 h-6 text-green-400" />
-                            </div>
-                            <div>
-                              <Badge variant="outline" className="text-xs mb-2">
-                                Process {step.step}
-                              </Badge>
-                              <h3 className="text-xl font-semibold text-green-400">
-                                {step.title}
-                              </h3>
-                            </div>
-                          </div>
+                    <CardContent className="p-8">
+                      <div className="flex items-center mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center mr-6">
+                          <span className="text-xl font-bold text-white">
+                            {step.step}
+                          </span>
+                        </div>
+                        <div className="flex-1">
+                          <Badge variant="outline" className="text-xs mb-2">
+                            Process {step.step}
+                          </Badge>
+                          <h3 className="text-2xl font-semibold text-green-400 mb-2">
+                            {step.title}
+                          </h3>
                           <p className="text-muted-foreground leading-relaxed mb-4">
                             {step.description}
                           </p>
@@ -420,78 +415,6 @@ const SmartChemistry = () => {
                               </Badge>
                             ))}
                           </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-
-                    <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">
-                          {step.step}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="flex-1">
-                      <div className="aspect-video bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-xl flex items-center justify-center">
-                        <div className="text-center">
-                          <Icon className="w-12 h-12 text-green-400 mb-2 mx-auto" />
-                          <p className="text-sm text-muted-foreground">
-                            Development Phase
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Features */}
-      <section className="py-24 bg-gradient-to-r from-green-900/10 via-background to-blue-900/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                ⚡ Key Features
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Components that make chemistry learning interactive and engaging
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {projectFeatures.map((feature, index) => {
-                const Icon = feature.icon;
-                const colors = ["green", "blue", "purple", "orange"];
-                const color = colors[index % colors.length];
-                return (
-                  <Card
-                    key={index}
-                    className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-400/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-8">
-                      <div className="flex items-start space-x-4">
-                        <div
-                          className={`w-12 h-12 bg-${color}-400/10 rounded-lg flex items-center justify-center flex-shrink-0`}
-                        >
-                          <Icon className={`w-6 h-6 text-${color}-400`} />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-2">
-                            <h3 className="text-lg font-semibold">
-                              {feature.title}
-                            </h3>
-                            <Badge variant="outline" className="text-xs">
-                              {feature.category}
-                            </Badge>
-                          </div>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {feature.description}
-                          </p>
                         </div>
                       </div>
                     </CardContent>

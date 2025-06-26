@@ -10,6 +10,7 @@ import {
   MessageSquare,
   Clock,
   Coffee,
+  Instagram,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -34,41 +36,29 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@xrdesigner.com",
-      href: "mailto:hello@xrdesigner.com",
+      value: "himanshipuri07@gmail.com",
+      href: "mailto:himanshipuri07@gmail.com",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Delhi, India",
       href: null,
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
     },
   ];
 
   const socialLinks = [
     {
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/himanshii7/",
+      color: "hover:text-pink-500",
+    },
+    {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/xrdesigner",
+      href: "https://www.linkedin.com/in/himanshi-puri-7a0aba223",
       color: "hover:text-blue-500",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/xrdesigner",
-      color: "hover:text-foreground",
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/xrdesigner",
-      color: "hover:text-blue-400",
     },
   ];
 
@@ -95,15 +85,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Create mailto link with form data
+    const subject = `Project Inquiry from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || "Not provided"}
+Project Type: ${formData.project || "Not specified"}
 
+Message:
+${formData.message}
+
+---
+This message was sent via himanshipuri.com contact form.
+    `.trim();
+
+    const mailtoLink = `mailto:himanshipuri07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open default email client
+    window.location.href = mailtoLink;
+
+    // Show success message
     toast({
-      title: "Message sent successfully!",
+      title: "Email client opened!",
       description:
-        "Thank you for reaching out. I'll get back to you within 24 hours.",
+        "Your default email application should now be open with the message pre-filled. Please send the email to complete your inquiry.",
     });
 
+    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -316,112 +325,14 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
-
-                {/* Availability */}
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold flex items-center">
-                      <Clock className="w-5 h-5 mr-2 text-xr-neon" />
-                      Availability
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-xr-neon rounded-full animate-pulse" />
-                      <span className="text-foreground font-medium">
-                        Currently available for new projects
-                      </span>
-                    </div>
-
-                    <div className="text-sm text-muted-foreground space-y-2">
-                      <p>🕐 Response time: Within 24 hours</p>
-                      <p>📅 Project start: 2-4 weeks</p>
-                      <p>🌍 Open to remote & on-site work</p>
-                    </div>
-
-                    <Button
-                      variant="outline"
-                      className="w-full border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground mt-4"
-                    >
-                      <Coffee className="w-4 h-4 mr-2" />
-                      Schedule a Call
-                    </Button>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Common questions about working together
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">
-                    What's your typical project timeline?
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Project timelines vary based on complexity, but typically
-                    range from 3-12 months. I provide detailed timelines during
-                    our initial consultation.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">
-                    Do you work with international clients?
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Absolutely! I work with clients worldwide and am comfortable
-                    with remote collaboration across different time zones.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">
-                    What platforms do you develop for?
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    I develop for all major XR platforms including Oculus/Meta,
-                    HoloLens, Magic Leap, mobile AR (iOS/Android), and WebXR.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">
-                    Do you provide ongoing support?
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Yes, I offer various support packages including maintenance,
-                    updates, and feature enhancements after project completion.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 };
-
 export default Contact;

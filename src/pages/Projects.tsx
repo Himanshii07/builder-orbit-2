@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -31,9 +32,9 @@ const Projects = () => {
       image: "/placeholder.svg",
       tags: ["Unity", "VR", "Storytelling", "Cultural Heritage", "3D Modeling"],
       featured: true,
-      year: "2023",
-      client: "Cultural Heritage Foundation",
-      duration: "8 months",
+      year: "2025",
+      client: "Individual Project",
+      duration: "2 months",
       slug: "kedarnath",
       links: {
         demo: "#",
@@ -59,7 +60,7 @@ const Projects = () => {
         "User Testing",
       ],
       featured: true,
-      year: "2023",
+      year: "2025",
       client: "Group Project",
       duration: "2 weeks",
       slug: "savey",
@@ -87,7 +88,7 @@ const Projects = () => {
         "Haptic Feedback",
       ],
       featured: true,
-      year: "2023",
+      year: "2025",
       client: "Individual Project",
       duration: "2 weeks",
       slug: "shooting-range",
@@ -115,9 +116,9 @@ const Projects = () => {
         "Hand-painted Textures",
       ],
       featured: true,
-      year: "2023",
+      year: "2025",
       client: "3D Art Portfolio",
-      duration: "Individual Project",
+      duration: "2 weeks",
       slug: "mushroom-house",
       links: {
         demo: "#",
@@ -143,9 +144,9 @@ const Projects = () => {
         "Character Integration",
       ],
       featured: true,
-      year: "2023",
+      year: "2025",
       client: "Personal Challenge",
-      duration: "4 weeks",
+      duration: "1 day",
       slug: "unreal-cinematic",
       links: {
         demo: "#",
@@ -172,7 +173,7 @@ const Projects = () => {
         "Cycles Renderer",
       ],
       featured: false,
-      year: "2023",
+      year: "2025",
       client: "Personal Learning",
       duration: "One Day Project",
       slug: "stormy-ocean",
@@ -201,7 +202,7 @@ const Projects = () => {
         "Group Project",
       ],
       featured: true,
-      year: "2023",
+      year: "2025",
       client: "Educational Innovation",
       duration: "1 Week",
       slug: "smart-chemistry",
@@ -467,6 +468,8 @@ const Projects = () => {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

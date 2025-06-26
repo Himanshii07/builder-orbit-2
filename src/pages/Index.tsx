@@ -4,37 +4,38 @@ import { ArrowRight, Play, Eye, Zap, Layers3, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const features = [
     {
       icon: Eye,
-      title: "Virtual Reality",
+      title: "Creating VR Experiences",
       description:
         "Immersive experiences that transport users to new dimensions",
     },
     {
       icon: Layers3,
-      title: "Augmented Reality",
+      title: "3D Modeling and Animations",
       description:
-        "Blending digital content seamlessly with the physical world",
+        "Crafting detailed 3D assets and bringing them to life through animation",
     },
     {
       icon: Brain,
-      title: "Mixed Reality",
+      title: "Augmented Reality",
       description:
-        "Creating hybrid environments where physical and digital coexist",
+        "Blending digital content seamlessly with the physical world",
     },
   ];
 
   const recentProjects = [
     {
-      title: "The Mushroom House",
-      category: "3D Environment",
+      title: "Kedarnath Mythological Story",
+      category: "VR Experience",
       image: "/placeholder.svg",
       description:
-        "Fantasy 3D environment showcasing complete pipeline from Maya to Unreal Engine 5",
-      slug: "mushroom-house",
+        "Immersive VR experience bringing ancient mythological stories of Kedarnath to life",
+      slug: "kedarnath",
     },
     {
       title: "Savey - Interactive Piggy Bank",
@@ -45,12 +46,12 @@ const Index = () => {
       slug: "savey",
     },
     {
-      title: "Shooting Range in VR",
-      category: "VR Experience",
+      title: "The Mushroom House",
+      category: "3D Environment",
       image: "/placeholder.svg",
       description:
-        "Realistic virtual reality shooting simulation with physics-based mechanics",
-      slug: "shooting-range",
+        "Fantasy 3D environment showcasing complete pipeline from Maya to Unreal Engine 5",
+      slug: "mushroom-house",
     },
   ];
 
@@ -155,7 +156,7 @@ const Index = () => {
                     </div>
 
                     <h3 className="text-xl font-semibold mb-3 group-hover:text-xr-neon transition-colors">
-                      3D Modeling
+                      {feature.title}
                     </h3>
 
                     <p className="text-muted-foreground leading-relaxed">
@@ -245,6 +246,8 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
