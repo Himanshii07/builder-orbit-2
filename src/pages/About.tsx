@@ -17,9 +17,9 @@ const About = () => {
     { name: "Unreal Engine 5", level: 95 },
     { name: "Unity 3D", level: 88 },
     { name: "Blender", level: 92 },
-    { name: "C# Programming", level: 85 },
+    { name: "Touch Design", level: 85 },
     { name: "UX/UI Design", level: 90 },
-    { name: "WebXR", level: 82 },
+    { name: "Maya", level: 82 },
   ];
 
   const experiences = [
@@ -107,11 +107,16 @@ const About = () => {
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  I'm a passionate XR designer with over 5 years of experience
-                  creating immersive digital experiences. My work spans across
-                  virtual reality, augmented reality, and mixed reality
-                  applications, with a focus on user-centered design and
-                  cutting-edge technology.
+                  I'm a passionate XR designer creating immersive digital
+                  experiences. My work spans across virtual reality, augmented
+                  reality, and mixed reality applications, with a focus on
+                  user-centered design and cutting-edge technology.
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  I'm skilled at solving complex problems through thoughtful
+                  design, integrating everyone's insights to find shared
+                  solutions, from strategy to refining user experiences.
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
