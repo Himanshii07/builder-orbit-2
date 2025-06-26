@@ -212,12 +212,70 @@ const Projects = () => {
         live: "#",
       },
     },
+    {
+      id: 8,
+      title: "Angry Birds Recreation",
+      category: "interactive",
+      categoryLabel: "Game Development",
+      description:
+        "A 2D recreation of Angry Birds using Unity with physics-based gameplay, multiple levels, and engaging visual effects. Created as part of Introduction to Coding course.",
+      longDescription:
+        "As part of the Introduction to Coding course, I developed a 2D version of Angry Birds using Unity. The project involved designing levels, scripting physics-based interactions, and creating an engaging user interface with a home screen. With three distinct levels, the game combined strategy and fun, showcasing gameplay mechanics and visual aesthetics inspired by the classic Angry Birds experience.",
+      image: "/placeholder.svg",
+      tags: [
+        "Unity",
+        "C#",
+        "Game Development",
+        "Physics",
+        "UI Design",
+        "Individual Project",
+      ],
+      featured: false,
+      year: "2024",
+      client: "Individual Project",
+      duration: "2 weeks",
+      slug: "angry-birds",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
+    {
+      id: 9,
+      title: "Netflix Spatial UI Design",
+      category: "vr",
+      categoryLabel: "Spatial Design",
+      description:
+        "Redesigned Netflix app for immersive environments like Apple Vision Pro, creating adaptive interfaces for various physical spaces with spatial awareness.",
+      longDescription:
+        "Driven by a passion to understand spatial UI design, I embarked on redesigning the Netflix app for immersive environments. The goal was to create a user-friendly interface adaptable to various physical spaces, offering an engaging streaming platform. This project leveraged spatial awareness and interactive design to transform the way users interact with content.",
+      image: "/placeholder.svg",
+      tags: [
+        "Spatial Design",
+        "Apple Vision Pro",
+        "Figma",
+        "UI/UX",
+        "Immersive Media",
+        "Individual Project",
+      ],
+      featured: true,
+      year: "2024",
+      client: "Individual Project",
+      duration: "1 week",
+      slug: "netflix-spatial",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
   ];
 
   const filters = [
     { id: "all", label: "All Projects", icon: Filter },
-    { id: "vr", label: "Virtual Reality", icon: Headphones },
-    { id: "interactive", label: "Interactive Design", icon: Smartphone },
+    { id: "vr", label: "VR & Spatial", icon: Headphones },
+    { id: "interactive", label: "Interactive & Games", icon: Smartphone },
     { id: "3d-art", label: "3D Environment", icon: MonitorSpeaker },
   ];
 
