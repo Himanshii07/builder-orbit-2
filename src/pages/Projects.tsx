@@ -153,6 +153,64 @@ const Projects = () => {
         live: "#",
       },
     },
+    {
+      id: 6,
+      title: "Stormy Ocean Scene",
+      category: "3d-art",
+      categoryLabel: "3D Animation",
+      description:
+        "A Blender learning project exploring ocean simulation and atmospheric rendering. An 8-second stormy ocean animation that took 8 hours to render, marking my first journey into 3D animation.",
+      longDescription:
+        "Out of personal interest, I explored Blender by following a YouTube tutorial and recreated a stormy ocean scene. This self-initiated project helped me understand the basics of Blender's simulation tools, lighting, materials, and camera work. It was an exciting first step into 3D animation and environment creation, giving me a feel for cinematic visuals and mood-building through motion and texture.",
+      image: "/placeholder.svg",
+      tags: [
+        "Blender 3D",
+        "Ocean Simulation",
+        "Atmospheric Lighting",
+        "Tutorial Learning",
+        "First Project",
+        "Cycles Renderer",
+      ],
+      featured: false,
+      year: "2023",
+      client: "Personal Learning",
+      duration: "One Day Project",
+      slug: "stormy-ocean",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
+    {
+      id: 7,
+      title: "Smart Chemistry",
+      category: "interactive",
+      categoryLabel: "Interactive Design",
+      description:
+        "An AI-powered educational tool using color-coded element cards and image recognition to make chemistry interactive and fun for students. Real-time compound identification with instant feedback.",
+      longDescription:
+        "To make chemistry more interactive and fun for students, we designed an AI-powered educational tool using color-coded element cards. Each card represents a chemical element, and students can arrange them to form compounds. Using image recognition, the tool instantly identifies the compound and gives real-time feedback. This hands-on approach helps students visualize and understand chemical combinations better.",
+      image: "/placeholder.svg",
+      tags: [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Image Recognition",
+        "Educational Technology",
+        "Computer Vision",
+        "Group Project",
+      ],
+      featured: true,
+      year: "2023",
+      client: "Educational Innovation",
+      duration: "1 Week",
+      slug: "smart-chemistry",
+      links: {
+        demo: "#",
+        github: "#",
+        live: "#",
+      },
+    },
   ];
 
   const filters = [
