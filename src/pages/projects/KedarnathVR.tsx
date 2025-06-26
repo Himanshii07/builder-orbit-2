@@ -24,7 +24,7 @@ const KedarnathVR = () => {
     title: "Kedarnath Mythological Story in VR",
     subtitle: "Immersive Spiritual Journey Through Ancient Sacred Tales",
     duration: "8 months",
-    year: "2023",
+    year: "2025",
     client: "Cultural Heritage Foundation",
     team: "4 members",
     role: "Lead XR Designer & Developer",

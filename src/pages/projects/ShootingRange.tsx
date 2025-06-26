@@ -27,7 +27,7 @@ const ShootingRange = () => {
     title: "Shooting Range in VR",
     subtitle: "Immersive VR Experience Exploring Fundamental Interactions",
     duration: "2 weeks",
-    year: "2023",
+    year: "2025",
     client: "Individual Project",
     team: "Solo Developer",
     role: "VR Developer & Designer",
