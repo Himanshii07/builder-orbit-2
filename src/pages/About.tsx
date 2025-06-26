@@ -358,43 +358,181 @@ const About = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      {/* When I'm Not Working Section */}
       <section className="py-24 bg-gradient-to-r from-xr-neon/5 via-background to-xr-cyber/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Achievements & Recognition
+                When I am not glued to my laptop for work
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Milestones in my XR design career
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                I can often be found exploring the world around me, seeking
+                inspiration from nature, culture and watching Netflix
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                return (
-                  <Card
-                    key={index}
-                    className="text-center group border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-8">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors">
-                        <Icon className="h-8 w-8 text-xr-neon" />
-                      </div>
+            {/* Image Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+              {/* Row 1 */}
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🌿 Nature Walks
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🌲</div>
+                </div>
+              </div>
 
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-xr-neon transition-colors">
-                        {achievement.title}
-                      </h3>
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🏛️ Cultural Sites
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">����️</div>
+                </div>
+              </div>
 
-                      <p className="text-muted-foreground text-sm">
-                        {achievement.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    📺 Netflix & Chill
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">📺</div>
+                </div>
+              </div>
+
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🌅 Sunrise Views
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🌅</div>
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    ☕ Coffee Adventures
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">☕</div>
+                </div>
+              </div>
+
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🎨 Art Galleries
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🎨</div>
+                </div>
+              </div>
+
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    📚 Reading Corner
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">📚</div>
+                </div>
+              </div>
+
+              <div className="aspect-square rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🏔️ Mountain Trails
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🏔️</div>
+                </div>
+              </div>
+
+              {/* Row 3 - Hidden on mobile, visible on larger screens */}
+              <div className="hidden md:block aspect-square rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">🌺 Gardens</p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🌺</div>
+                </div>
+              </div>
+
+              <div className="hidden md:block aspect-square rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🌊 Beach Days
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🌊</div>
+                </div>
+              </div>
+
+              <div className="hidden lg:block aspect-square rounded-xl bg-gradient-to-br from-rose-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🎭 Local Events
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🎭</div>
+                </div>
+              </div>
+
+              <div className="hidden lg:block aspect-square rounded-xl bg-gradient-to-br from-violet-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-medium">
+                    🎵 Music Festivals
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-4xl">🎵</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Fun Note */}
+            <div className="mt-12 text-center">
+              <Card className="border-xr-neon/30 bg-gradient-to-r from-xr-neon/5 to-xr-cyber/5 max-w-2xl mx-auto">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground italic">
+                    "Inspiration strikes when you least expect it - sometimes
+                    during a Netflix binge, sometimes while hiking through
+                    nature, and often when experiencing different cultures.
+                    These moments away from the screen fuel my creativity and
+                    bring fresh perspectives to my work."
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
