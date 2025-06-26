@@ -893,6 +893,184 @@ const KedarnathVR = () => {
         </div>
       </section>
 
+      {/* Learning Outcomes / Skills Acquired */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">
+                Learning Outcomes & Skills Acquired
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Key competencies and insights gained through this comprehensive
+                VR project
+              </p>
+            </div>
+
+            {/* Technical Skills */}
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-orange-400 text-2xl">
+                    <Code className="w-6 h-6 mr-3" />
+                    Technical Skills
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-orange-400 mb-3">
+                        3D Development
+                      </h4>
+                      <ul className="text-muted-foreground space-y-2 text-sm">
+                        <li>• Maya 3D modeling and animation</li>
+                        <li>• Character rigging and animation</li>
+                        <li>• UV mapping and texturing workflows</li>
+                        <li>• Substance Painter material creation</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-orange-400 mb-3">
+                        VR Development
+                      </h4>
+                      <ul className="text-muted-foreground space-y-2 text-sm">
+                        <li>• Unreal Engine 5 mastery</li>
+                        <li>• Blueprint visual scripting</li>
+                        <li>• VR interaction design</li>
+                        <li>• Niagara particle systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-red-400 text-2xl">
+                    <Heart className="w-6 h-6 mr-3" />
+                    Cultural & Creative Skills
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-red-400 mb-3">
+                        Cultural Research
+                      </h4>
+                      <ul className="text-muted-foreground space-y-2 text-sm">
+                        <li>• Mythological story analysis</li>
+                        <li>• Sacred architecture study</li>
+                        <li>• Ritual and ceremony research</li>
+                        <li>• Cultural sensitivity in design</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-red-400 mb-3">
+                        Experience Design
+                      </h4>
+                      <ul className="text-muted-foreground space-y-2 text-sm">
+                        <li>• Immersive storytelling</li>
+                        <li>• User experience flow design</li>
+                        <li>• Emotional engagement strategies</li>
+                        <li>• Cultural narrative adaptation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Key Learning Insights */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  title: "Cross-Platform Integration",
+                  description:
+                    "Mastered the complete pipeline from Maya to Substance Painter to Unreal Engine 5, understanding how different tools work together.",
+                  icon: Layers,
+                  color: "orange",
+                },
+                {
+                  title: "Cultural Technology Bridge",
+                  description:
+                    "Learned to use modern technology respectfully to preserve and share ancient cultural heritage with contemporary audiences.",
+                  icon: Building2,
+                  color: "red",
+                },
+                {
+                  title: "Problem-Solving Under Constraints",
+                  description:
+                    "Developed creative solutions for technical challenges while maintaining cultural authenticity and spiritual reverence.",
+                  icon: Lightbulb,
+                  color: "pink",
+                },
+                {
+                  title: "User-Centered Design",
+                  description:
+                    "Understanding different audience needs (Gen Z, Young Adults, Devotees) and designing experiences that resonate with each group.",
+                  icon: User,
+                  color: "yellow",
+                },
+                {
+                  title: "Independent Project Management",
+                  description:
+                    "Successfully managed a complex 2-month solo project from concept to completion, balancing multiple technical and creative aspects.",
+                  icon: Target,
+                  color: "blue",
+                },
+                {
+                  title: "Cinematic Storytelling",
+                  description:
+                    "Created 5 mythological scenes with sequencer, mastering cinematic composition, lighting, and narrative pacing in VR.",
+                  icon: Camera,
+                  color: "purple",
+                },
+              ].map((insight, index) => {
+                const Icon = insight.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="text-center border-border/50 bg-card/50 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300"
+                  >
+                    <CardContent className="p-6">
+                      <div
+                        className={`w-12 h-12 bg-${insight.color}-400/10 rounded-full flex items-center justify-center mx-auto mb-4`}
+                      >
+                        <Icon className={`w-6 h-6 text-${insight.color}-400`} />
+                      </div>
+                      <h3 className="font-semibold mb-3 text-orange-400">
+                        {insight.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {insight.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {/* Final Insight */}
+            <Card className="border-orange-400/30 bg-gradient-to-r from-orange-400/5 to-red-400/5">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-semibold mb-4 text-orange-400">
+                  Key Project Insight
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                  This project taught me that technology is not just about
+                  innovation—it's about preservation, connection, and respect.
+                  By creating an immersive VR experience of Kedarnath, I learned
+                  how to bridge the gap between ancient wisdom and modern minds,
+                  ensuring that sacred stories continue to inspire and educate
+                  future generations in ways that feel both authentic and
+                  accessible.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Project Navigation */}
       <section className="py-24 bg-gradient-to-r from-orange-400/10 via-background to-red-400/10">
         <div className="container mx-auto px-4 text-center">
