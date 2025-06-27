@@ -105,11 +105,11 @@ const Index = () => {
               <Button
                 asChild
                 size="lg"
-                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 hover:shadow-[0_0_30px_rgba(46,213,115,0.6)] transition-all duration-300 hover:scale-105"
+                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300"
               >
                 <Link to="/projects">
                   View My Work
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform animate-bounce-subtle group-hover:animate-pulse" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
 
@@ -117,10 +117,10 @@ const Index = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground hover:shadow-[0_0_30px_rgba(79,209,197,0.6)] transition-all duration-300 hover:scale-105"
+                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
               >
                 <Link to="/about">
-                  <Play className="mr-2 h-4 w-4 animate-bounce-subtle group-hover:animate-pulse" />
+                  <Play className="mr-2 h-4 w-4" />
                   About Me
                 </Link>
               </Button>
