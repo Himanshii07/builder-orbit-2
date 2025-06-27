@@ -406,17 +406,6 @@ const MushroomHouse = () => {
                         </span>
                       </div>
                     </div>
-
-                    <div className="flex-1">
-                      <div className="aspect-video bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-xl flex items-center justify-center">
-                        <div className="text-center">
-                          <Icon className="w-12 h-12 text-purple-400 mb-2 mx-auto" />
-                          <p className="text-sm text-muted-foreground">
-                            Process Video/Images
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 );
               })}
