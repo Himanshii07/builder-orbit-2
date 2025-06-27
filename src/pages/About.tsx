@@ -174,7 +174,7 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,213,115,0.6)]">
+                  <Button className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300">
                     <Download className="mr-2 h-4 w-4 group-hover:hidden" />
                     <div className="mr-2 h-4 w-4 hidden group-hover:flex items-center space-x-1">
                       <div className="w-1 h-1 bg-current rounded-full animate-bounce"></div>
@@ -193,11 +193,10 @@ const About = () => {
                   <Button
                     id="coffee-button"
                     variant="outline"
-                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300 hover:shadow-[0_0_30px_rgba(79,209,197,0.6)]"
+                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
                   >
-                    <Coffee className="mr-2 h-4 w-4 animate-bounce-subtle" />
-                    Let's Grab Coffee{" "}
-                    <span className="ml-1 animate-bounce-subtle">☕</span>
+                    <Coffee className="mr-2 h-4 w-4" />
+                    Let's Grab Coffee <span className="ml-1">☕</span>
                   </Button>
                 </div>
               </div>
