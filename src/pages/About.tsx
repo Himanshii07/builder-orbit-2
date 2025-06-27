@@ -151,7 +151,7 @@ const About = () => {
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent animate-fade-in">
                   About Me
                 </h1>
 
