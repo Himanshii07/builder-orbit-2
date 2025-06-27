@@ -7,6 +7,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    preview: {
+      allowedHosts: ["himanshixr.onrender.com"],
+    },
   },
   plugins: [react()],
   resolve: {
