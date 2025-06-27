@@ -138,7 +138,7 @@ This message was sent via himanshipuri.com contact form.
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
               Get In Touch
             </h1>
 
