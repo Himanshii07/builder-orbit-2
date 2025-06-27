@@ -24,10 +24,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const About = () => {
+  const [skillsVisible, setSkillsVisible] = useState(false);
+  const skillsRef = useRef<HTMLDivElement>(null);
+
   const skills = [
     { name: "Unreal Engine 5", level: 95 },
     { name: "Unity 3D", level: 88 },
-    { name: "Blender", level: 92 },
+    { name: "Blender", level: 72 },
     { name: "Touch Design", level: 85 },
     { name: "UX/UI Design", level: 90 },
     { name: "Maya", level: 82 },
@@ -56,6 +59,45 @@ const About = () => {
     },
   ];
 
+  // Intersection Observer for skill bars
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setSkillsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, []);
+
+  // Wiggle animation for coffee button every 15 seconds
+  useEffect(() => {
+    const wiggleInterval = setInterval(() => {
+      const coffeeButton = document.getElementById("coffee-button");
+      if (coffeeButton) {
+        coffeeButton.style.animation = "none";
+        setTimeout(() => {
+          coffeeButton.style.animation = "wiggle 1s ease-in-out";
+        }, 100);
+      }
+    }, 15000);
+
+    return () => clearInterval(wiggleInterval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -66,19 +108,28 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Profile Image */}
-              <div className="relative">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/public/Photos/me.jpg"
-                    alt="Profile"
-                    className="object-cover w-full h-full rounded-2xl"
-                    style={{ maxHeight: '100%', maxWidth: '100%' }}
-                  />
+              <div className="relative group">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center space-x-2 text-sm text-foreground">
+
+                  {/* Default Content */}
+                  <div className="absolute bottom-6 left-6 right-6 transition-opacity duration-500 group-hover:opacity-0">
+                    <div className="flex items-center space-x-2 text-sm text-foreground hover:shadow-[0_0_15px_rgba(46,213,115,0.3)] transition-all duration-300 p-2 rounded-lg hover:bg-xr-neon/10">
                       <div className="w-2 h-2 bg-xr-neon rounded-full animate-pulse" />
                       <span>Available for new projects</span>
+                    </div>
+                  </div>
+
+                  {/* Alternate Content on Hover */}
+                  <div className="absolute inset-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="text-center p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-xr-neon/30">
+                      <p className="text-xr-neon font-medium mb-2">
+                        💡 Fun Fact
+                      </p>
+                      <p className="text-sm text-muted-foreground italic">
+                        "I believe the best XR experiences come from
+                        understanding both technology and human psychology."
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +144,7 @@ const About = () => {
 
               {/* Content */}
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:shadow-[0_0_20px_rgba(46,213,115,0.4)] hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
                   <Headphones className="w-4 h-4 mr-2 text-xr-neon" />
                   <span className="text-sm font-medium text-xr-neon">
                     XR Design Specialist
@@ -123,17 +174,30 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80">
-                    <Download className="mr-2 h-4 w-4" />
+                  <Button className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,213,115,0.6)]">
+                    <Download className="mr-2 h-4 w-4 group-hover:hidden" />
+                    <div className="mr-2 h-4 w-4 hidden group-hover:flex items-center space-x-1">
+                      <div className="w-1 h-1 bg-current rounded-full animate-bounce"></div>
+                      <div
+                        className="w-1 h-1 bg-current rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-1 h-1 bg-current rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
                     Download Resume
                   </Button>
 
                   <Button
+                    id="coffee-button"
                     variant="outline"
-                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground"
+                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300 hover:shadow-[0_0_30px_rgba(79,209,197,0.6)]"
                   >
-                    <Coffee className="mr-2 h-4 w-4" />
-                    Let's Grab Coffee
+                    <Coffee className="mr-2 h-4 w-4 animate-bounce-subtle" />
+                    Let's Grab Coffee{" "}
+                    <span className="ml-1 animate-bounce-subtle">☕</span>
                   </Button>
                 </div>
               </div>
@@ -143,7 +207,7 @@ const About = () => {
       </section>
 
       {/* Technical Skills Section */}
-      <section className="py-24 bg-muted/20">
+      <section className="py-24 bg-muted/20" ref={skillsRef}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -166,7 +230,20 @@ const About = () => {
                       {skill.level}%
                     </span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
+                  <div className="relative h-2 bg-muted rounded-full overflow-hidden">
+                    <div
+                      className={`h-full bg-xr-neon transition-all duration-1500 ease-out ${
+                        skillsVisible ? "animate-fill-bar" : "w-0"
+                      }`}
+                      style={
+                        {
+                          "--target-width": `${skill.level}%`,
+                          width: skillsVisible ? `${skill.level}%` : "0%",
+                          animationDelay: `${index * 0.2}s`,
+                        } as React.CSSProperties
+                      }
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -432,119 +509,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-<<<<<<< HEAD
-
-=======
-            {/* Image Collage - Fixed Rectangle Grid */}
-            <div className="w-full max-w-4xl mx-auto">
-              <div className="h-96 border border-border/20 rounded-2xl overflow-hidden p-2 bg-muted/10">
-                <div className="grid grid-cols-6 grid-rows-4 gap-2 h-full">
-                  {/* Tall rectangle */}
-                  <div className="col-span-2 row-span-4 rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        🌿 Nature Walks
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-4xl">🌲</div>
-                    </div>
-                  </div>
-
-                  {/* Square */}
-                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        🏛️ Cultural Sites
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-2xl">🏛️</div>
-                    </div>
-                  </div>
-
-                  {/* Wide rectangle */}
-                  <div className="col-span-3 row-span-1 rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        📺 Netflix & Chill
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-2xl">📺</div>
-                    </div>
-                  </div>
-
-                  {/* Square */}
-                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        🌅 Sunrise
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-2xl">🌅</div>
-                    </div>
-                  </div>
-
-                  {/* Square */}
-                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        ☕ Coffee
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-xl">���</div>
-                    </div>
-                  </div>
-
-                  {/* Square */}
-                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">🎨 Art</p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-xl">🎨</div>
-                    </div>
-                  </div>
-
-                  {/* Square */}
-                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        📚 Reading
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-xl">📚</div>
-                    </div>
-                  </div>
-
-                  {/* Wide rectangle */}
-                  <div className="col-span-2 row-span-1 rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-xs font-medium">
-                        🏔️ Mountain Trails
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-xl">🏔️</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
->>>>>>> 5c79e39 (Add hover glow to About Me heading and improve profile section with alternate content)
 
             {/* Fun Note */}
             <div className="mt-12 text-center">
