@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Download,
   Award,
@@ -434,7 +434,7 @@ const About = () => {
             </div>
 
 <<<<<<< HEAD
-            
+
 =======
             {/* Image Collage - Fixed Rectangle Grid */}
             <div className="w-full max-w-4xl mx-auto">
