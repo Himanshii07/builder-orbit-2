@@ -189,7 +189,7 @@ This message was sent via himanshipuri.com contact form.
                             onChange={handleInputChange}
                             placeholder="your@email.com"
                             required
-                            className="border-border/50 focus:border-xr-neon"
+                            className="border-border/50 focus:border-xr-neon focus:shadow-[0_0_10px_rgba(46,213,115,0.3)] transition-all duration-300"
                           />
                         </div>
                       </div>
