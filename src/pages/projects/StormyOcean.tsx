@@ -364,13 +364,8 @@ const StormyOcean = () => {
                 const Icon = step.icon;
                 const isEven = index % 2 === 0;
                 return (
-                  <div
-                    key={index}
-                    className={`flex items-center gap-8 ${
-                      isEven ? "flex-row" : "flex-row-reverse"
-                    }`}
-                  >
-                    <div className="flex-1">
+                  <div key={index} className="flex justify-center">
+                    <div className="max-w-2xl w-full">
                       <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300">
                         <CardContent className="p-8">
                           <div className="flex items-center mb-4">
@@ -402,14 +397,6 @@ const StormyOcean = () => {
                           </div>
                         </CardContent>
                       </Card>
-                    </div>
-
-                    <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">
-                          {step.step}
-                        </span>
-                      </div>
                     </div>
                   </div>
                 );
