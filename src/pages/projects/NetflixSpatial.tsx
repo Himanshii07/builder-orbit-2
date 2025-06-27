@@ -18,6 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const NetflixSpatial = () => {
   const projectDetails = {
@@ -206,19 +207,11 @@ const NetflixSpatial = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Smartphone className="w-24 h-24 text-xr-neon/60 mx-auto mb-4" />
-                    <p className="text-lg font-medium text-xr-neon">
-                      Netflix Spatial UI Design
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Space for UI design screenshots and mockups
-                    </p>
-                  </div>
-                </div>
-              </div>
+               <CustomVideoPlayer
+              src="/videos/Netflix.mp4"
+              title="Netflix Spatial UI Design"
+              className="aspect-video mb-16"
+            />
             </Card>
           </div>
         </div>

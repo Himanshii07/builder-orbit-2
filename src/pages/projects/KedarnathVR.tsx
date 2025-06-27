@@ -40,6 +40,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const KedarnathVR = () => {
   const [activeLevel, setActiveLevel] = useState("level1");
@@ -353,17 +354,11 @@ const KedarnathVR = () => {
             </div>
 
             {/* Hero Video Section */}
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-orange-400/20 via-red-400/20 to-pink-400/20 aspect-video mb-20">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-                <Badge className="bg-white/10 text-white border-white/20 text-base py-2 px-4">
-                  🕉️ Complete Development Process Video
-                </Badge>
-                <div className="text-white/80 text-base">
-                  2 Month Journey • Single Process Video
-                </div>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Trailer Video.mp4"
+              title="Immersive Experience of Kedarnath Temple | Trailer Video"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>
@@ -530,7 +525,7 @@ const KedarnathVR = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Why Kedarnath?</h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-md text-muted-foreground leading-relaxed">
               <p>
                 Explored multiple <strong>Jyotirlingas</strong> before choosing
                 Kedarnath due to its spiritual depth and challenging
@@ -561,6 +556,11 @@ const KedarnathVR = () => {
                   <p className="text-lg font-medium text-center mb-4">
                     Video Available:
                   </p>
+                  <CustomVideoPlayer
+              src="/videos/Whyyy.mp4"
+              title=""
+              className="aspect-video mb-16"
+            />
                   <p className="text-lg text-center text-red-400 font-semibold">
                     "The Neglected Sanctity of Kedarnath"
                   </p>

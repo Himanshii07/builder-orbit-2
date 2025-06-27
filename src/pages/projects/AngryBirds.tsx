@@ -18,6 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const AngryBirds = () => {
   const projectDetails = {
@@ -184,19 +185,11 @@ const AngryBirds = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Gamepad2 className="w-24 h-24 text-xr-neon/60 mx-auto mb-4" />
-                    <p className="text-lg font-medium text-xr-neon">
-                      Game Screenshot
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Unity Angry Birds Recreation
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CustomVideoPlayer
+              src="/videos/Angery Birds.mp4"
+              title="Angry Birds Recreation Project"
+              className="aspect-video mb-16"
+            />
             </Card>
           </div>
         </div>

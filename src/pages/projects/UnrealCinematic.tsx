@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const UnrealCinematic = () => {
   const projectDetails = {
@@ -228,22 +229,11 @@ const UnrealCinematic = () => {
             </div>
 
             {/* Project Image/Video */}
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 aspect-video mb-16">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <Badge className="bg-xr-neon/20 text-xr-neon border-xr-neon/30">
-                  Dark Gothic Atmosphere
-                </Badge>
-              </div>
-              {/* Placeholder for castle environment visualization */}
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center text-white/70">
-                  <Castle className="w-16 h-16 mx-auto mb-4 opacity-50" />
-                  <p className="text-lg">Cinematic Castle Environment</p>
-                  <p className="text-sm opacity-70">Dark Atmospheric Design</p>
-                </div>
-              </div>
-            </div>
+            <CustomVideoPlayer 
+              src="/videos/Unreal Engine Challenge.mp4"
+              title="Cinematic Envirnonment Showcase"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>

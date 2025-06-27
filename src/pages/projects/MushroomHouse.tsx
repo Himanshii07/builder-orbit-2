@@ -25,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const MushroomHouse = () => {
   const projectDetails = {
@@ -256,17 +257,11 @@ const MushroomHouse = () => {
             </div>
 
             {/* Hero Video/Image Section */}
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-400/20 via-pink-400/20 to-yellow-400/20 aspect-video mb-16">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                <Badge className="bg-white/10 text-white border-white/20">
-                  🍄 Fantasy Environment Showcase
-                </Badge>
-                <div className="text-white/80 text-sm">
-                  3D Modeling Process Videos Available
-                </div>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Mushroom House.mp4"
+              title="🍄 Mushroom House Environment Showcase"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>

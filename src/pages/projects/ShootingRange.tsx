@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const ShootingRange = () => {
   const projectDetails = {
@@ -232,14 +233,11 @@ const ShootingRange = () => {
             </div>
 
             {/* Project Image/Video */}
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-xr-void/20 to-xr-neon/20 aspect-video mb-16">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <Badge className="bg-xr-void/20 text-xr-void border-xr-void/30">
-                  VR Training Environment
-                </Badge>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Shooting Range Final.mp4"
+              title="Shootin Range VR Experience"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>

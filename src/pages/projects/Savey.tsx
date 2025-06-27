@@ -29,6 +29,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const Savey = () => {
   const projectDetails = {
@@ -271,17 +272,11 @@ const Savey = () => {
             </div>
 
             {/* Hero Image/Demo Space */}
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-yellow-400/20 via-pink-400/20 to-blue-400/20 aspect-video mb-16">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                <Badge className="bg-white/10 text-white border-white/20">
-                  Interactive Piggy Bank Demo
-                </Badge>
-                <div className="text-white/80 text-sm">
-                  User Testing Videos Coming Soon
-                </div>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Savey.mp4"
+              title="The Interactive Piggy Bank"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>
@@ -528,13 +523,11 @@ const Savey = () => {
               expressive eyes and blinking animations
             </p>
 
-            <div className="aspect-video rounded-2xl bg-gradient-to-br from-yellow-400/20 to-pink-400/20 flex items-center justify-center mb-8">
-              <div className="text-center">
-                <Camera className="w-16 h-16 text-muted-foreground mb-4 mx-auto" />
-                <p className="text-muted-foreground">User Testing Videos</p>
-                <p className="text-sm text-muted-foreground">Coming Soon</p>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Savey Kids.mp4"
+              title="Savey User Testing Highlights"
+              className="aspect-video mb-16"
+            />
 
             <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div className="bg-green-100 text-green-700 p-4 rounded-lg">

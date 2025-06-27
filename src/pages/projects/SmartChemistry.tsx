@@ -31,6 +31,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const SmartChemistry = () => {
   const projectDetails = {
@@ -291,17 +292,11 @@ const SmartChemistry = () => {
             </div>
 
             {/* Hero Video/Image Section */}
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-green-400/20 via-blue-400/20 to-purple-400/20 aspect-video mb-16">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                <Badge className="bg-white/10 text-white border-white/20">
-                  🧪 AI Chemical Compound Recognition System
-                </Badge>
-                <div className="text-white/80 text-sm">
-                  Result Video • Real-Time Recognition
-                </div>
-              </div>
-            </div>
+            <CustomVideoPlayer
+              src="/videos/Smart Chemistry.mp4"
+              title="Smart Chemistry AI Recognition Demo"
+              className="aspect-video mb-16"
+            />
           </div>
         </div>
       </section>
@@ -395,9 +390,9 @@ const SmartChemistry = () => {
                           </span>
                         </div>
                         <div className="flex-1">
-                          <Badge variant="outline" className="text-xs mb-2">
+                          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-2">
                             Process {step.step}
-                          </Badge>
+                          </div>
                           <h3 className="text-2xl font-semibold text-green-400 mb-2">
                             {step.title}
                           </h3>
@@ -406,13 +401,12 @@ const SmartChemistry = () => {
                           </p>
                           <div className="flex flex-wrap gap-2">
                             {step.tools.map((tool, toolIndex) => (
-                              <Badge
+                              <div
                                 key={toolIndex}
-                                variant="secondary"
-                                className="text-xs"
+                                className="inline-flex items-center rounded-full bg-secondary text-secondary-foreground px-2.5 py-0.5 text-xs font-semibold"
                               >
                                 {tool}
-                              </Badge>
+                              </div>
                             ))}
                           </div>
                         </div>
