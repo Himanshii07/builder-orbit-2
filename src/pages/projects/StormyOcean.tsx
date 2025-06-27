@@ -411,17 +411,6 @@ const StormyOcean = () => {
                         </span>
                       </div>
                     </div>
-
-                    <div className="flex-1">
-                      <div className="aspect-video bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-xl flex items-center justify-center">
-                        <div className="text-center">
-                          <Icon className="w-12 h-12 text-blue-400 mb-2 mx-auto" />
-                          <p className="text-sm text-muted-foreground">
-                            Learning Progress
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 );
               })}
