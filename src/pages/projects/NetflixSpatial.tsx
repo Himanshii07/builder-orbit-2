@@ -129,7 +129,7 @@ const NetflixSpatial = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="border-xr-neon text-xr-neon hover:bg-xr-neon hover:text-xr-neon-foreground"
+                    className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
                   >
                     <Figma className="mr-2 h-4 w-4" />
                     View Figma Design
