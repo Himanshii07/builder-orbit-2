@@ -233,7 +233,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-xr-neon/10 via-background to-xr-cyber/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
             Ready to Create Something Amazing?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
