@@ -95,7 +95,7 @@ const NetflixSpatial = () => {
             style={{ animationDelay: "1s" }}
           />
         </div>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto">
             <Button
               asChild
