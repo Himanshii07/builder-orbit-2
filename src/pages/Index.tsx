@@ -90,7 +90,7 @@ const Index = () => {
             </h1>
 
             <p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up"
+              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
               Crafting immersive experiences that blur the line between the
@@ -99,17 +99,17 @@ const Index = () => {
             </p>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
               <Button
                 asChild
                 size="lg"
-                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80"
+                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 hover:shadow-[0_0_30px_rgba(46,213,115,0.6)] transition-all duration-300 hover:scale-105"
               >
                 <Link to="/projects">
                   View My Work
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform animate-bounce-subtle group-hover:animate-pulse" />
                 </Link>
               </Button>
 
@@ -117,10 +117,10 @@ const Index = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground"
+                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground hover:shadow-[0_0_30px_rgba(79,209,197,0.6)] transition-all duration-300 hover:scale-105"
               >
                 <Link to="/about">
-                  <Play className="mr-2 h-4 w-4" />
+                  <Play className="mr-2 h-4 w-4 animate-bounce-subtle group-hover:animate-pulse" />
                   About Me
                 </Link>
               </Button>
