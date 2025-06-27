@@ -144,7 +144,7 @@ const About = () => {
 
               {/* Content */}
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:shadow-[0_0_20px_rgba(46,213,115,0.4)] hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
                   <Headphones className="w-4 h-4 mr-2 text-xr-neon" />
                   <span className="text-sm font-medium text-xr-neon">
                     XR Design Specialist
