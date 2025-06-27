@@ -103,10 +103,10 @@ const NetflixSpatial = () => {
             <div className="grid lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
                 <div className="mb-6">
-                  <Badge className="mb-4 bg-xr-neon/20 text-xr-neon border-xr-neon/30">
+                  <Badge className="mb-4 bg-red-500/20 text-red-500 border-red-500/30">
                     {projectDetails.category}
                   </Badge>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-red-500 bg-clip-text text-transparent hover:drop-shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 cursor-default animate-fade-in">
                     {projectDetails.title}
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed mb-6">
@@ -207,11 +207,11 @@ const NetflixSpatial = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
-               <CustomVideoPlayer
-              src="/videos/Netflix.mp4"
-              title="Netflix Spatial UI Design"
-              className="aspect-video mb-16"
-            />
+              <CustomVideoPlayer
+                src="/videos/Netflix.mp4"
+                title="Netflix Spatial UI Design"
+                className="aspect-video mb-16"
+              />
             </Card>
           </div>
         </div>
