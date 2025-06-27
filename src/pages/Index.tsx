@@ -85,7 +85,7 @@ const Index = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-slide-up">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-fade-in hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
               XR Designer
             </h1>
 
