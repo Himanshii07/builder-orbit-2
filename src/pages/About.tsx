@@ -114,7 +114,7 @@ const About = () => {
 
                   {/* Default Content */}
                   <div className="absolute bottom-6 left-6 right-6 transition-opacity duration-500 group-hover:opacity-0">
-                    <div className="flex items-center space-x-2 text-sm text-foreground hover:shadow-[0_0_15px_rgba(46,213,115,0.3)] transition-all duration-300 p-2 rounded-lg hover:bg-xr-neon/10">
+                    <div className="flex items-center space-x-2 text-sm text-foreground transition-all duration-300 p-2 rounded-lg hover:bg-xr-neon/10">
                       <div className="w-2 h-2 bg-xr-neon rounded-full animate-pulse" />
                       <span>Available for new projects</span>
                     </div>
