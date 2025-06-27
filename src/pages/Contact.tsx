@@ -131,7 +131,7 @@ This message was sent via himanshipuri.com contact form.
       <section className="py-24 bg-gradient-to-br from-background to-xr-neon/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 hover:shadow-[0_0_20px_rgba(46,213,115,0.4)] hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
               <MessageSquare className="w-4 h-4 mr-2 text-xr-neon" />
               <span className="text-sm font-medium text-xr-neon">
                 Let's Connect
