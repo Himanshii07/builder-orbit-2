@@ -541,25 +541,61 @@ const About = () => {
               </p>
             </div>
 
-            {/* Illustration Grid - Space for images to be added */}
+            {/* Illustration Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
+              {[
+                {
+                  id: 1,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Ff65df03c1ae94121ba01db30ec410ed3?format=webp&width=800",
+                  title: "Krishna Avatar",
+                  description:
+                    "Digital illustration with traditional Indian theme",
+                },
+                {
+                  id: 2,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fbb0c9fb0e17249baa3f46f3472da3f40?format=webp&width=800",
+                  title: "Happy New Year",
+                  description:
+                    "Celebratory digital artwork with human intelligence theme",
+                },
+                {
+                  id: 3,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fc18dcab9917548469d723833a0e195c8?format=webp&width=800",
+                  title: "Thoughtful Moment",
+                  description: "Character illustration with dreamy aesthetic",
+                },
+                {
+                  id: 4,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6658e5b7f3c542aa84e3836cac4ab3bd?format=webp&width=800",
+                  title: "Tropical Paradise",
+                  description:
+                    "Landscape illustration with palm trees and sunset",
+                },
+                {
+                  id: 5,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Faa26438c10a145758ace0a70c8c8e288?format=webp&width=800",
+                  title: "Monument Valley",
+                  description: "Digital landscape with architectural elements",
+                },
+              ].map((illustration) => (
                 <Card
-                  key={item}
-                  className="group aspect-square border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer"
+                  key={illustration.id}
+                  className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer hover:scale-105"
                 >
-                  <CardContent className="p-4 h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-xr-neon/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-xr-neon/20 transition-colors">
-                        <Palette className="w-8 h-8 text-xr-neon" />
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Illustration {item}
-                      </p>
-                      <p className="text-xs text-muted-foreground/70 mt-1">
-                        Space for artwork
-                      </p>
-                    </div>
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={illustration.src}
+                      alt={illustration.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <h3 className="font-medium text-foreground mb-1 group-hover:text-xr-neon transition-colors">
+                      {illustration.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      {illustration.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
