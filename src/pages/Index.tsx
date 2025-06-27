@@ -233,18 +233,19 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-xr-neon/10 via-background to-xr-cyber/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
             Ready to Create Something Amazing?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's collaborate on your next XR project and bring your vision to
-            life.
+            life. ☕{" "}
+            <span className="inline-block animate-bounce-subtle">☕</span>
           </p>
 
           <Button
             asChild
             size="lg"
-            className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80"
+            className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 hover:shadow-[0_0_30px_rgba(46,213,115,0.6)] transition-all duration-300 hover:scale-105"
           >
             <Link to="/contact">
               Get In Touch
