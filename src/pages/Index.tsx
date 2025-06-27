@@ -78,7 +78,7 @@ const Index = () => {
 
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in hover:shadow-[0_0_20px_rgba(46,213,115,0.4)] hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
               <Zap className="w-4 h-4 mr-2 text-xr-neon" />
               <span className="text-sm font-medium text-xr-neon">
                 Pushing the boundaries of reality
