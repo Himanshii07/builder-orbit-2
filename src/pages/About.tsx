@@ -100,7 +100,7 @@ const About = () => {
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent hover:drop-shadow-[0_0_20px_rgba(46,213,115,0.5)] transition-all duration-300 cursor-default">
                   About Me
                 </h1>
 
@@ -433,7 +433,118 @@ const About = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             
+=======
+            {/* Image Collage - Fixed Rectangle Grid */}
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="h-96 border border-border/20 rounded-2xl overflow-hidden p-2 bg-muted/10">
+                <div className="grid grid-cols-6 grid-rows-4 gap-2 h-full">
+                  {/* Tall rectangle */}
+                  <div className="col-span-2 row-span-4 rounded-xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🌿 Nature Walks
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-4xl">🌲</div>
+                    </div>
+                  </div>
+
+                  {/* Square */}
+                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-blue-400/20 to-cyan-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🏛️ Cultural Sites
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">🏛️</div>
+                    </div>
+                  </div>
+
+                  {/* Wide rectangle */}
+                  <div className="col-span-3 row-span-1 rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        📺 Netflix & Chill
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">📺</div>
+                    </div>
+                  </div>
+
+                  {/* Square */}
+                  <div className="col-span-1 row-span-2 rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🌅 Sunrise
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-2xl">🌅</div>
+                    </div>
+                  </div>
+
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-teal-400/20 to-blue-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        ☕ Coffee
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">���</div>
+                    </div>
+                  </div>
+
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-pink-400/20 to-rose-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">🎨 Art</p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">🎨</div>
+                    </div>
+                  </div>
+
+                  {/* Square */}
+                  <div className="col-span-1 row-span-1 rounded-xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        📚 Reading
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">📚</div>
+                    </div>
+                  </div>
+
+                  {/* Wide rectangle */}
+                  <div className="col-span-2 row-span-1 rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-2 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-xs font-medium">
+                        🏔️ Mountain Trails
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-xl">🏔️</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> 5c79e39 (Add hover glow to About Me heading and improve profile section with alternate content)
 
             {/* Fun Note */}
             <div className="mt-12 text-center">
