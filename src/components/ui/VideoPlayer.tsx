@@ -41,7 +41,7 @@ const CustomVideoPlayer = ({ src, title = "Project Showcase", className = "" }) 
         <>
           <iframe
             className="w-full h-full aspect-video object-cover"
-            src={`https://www.youtube.com/embed/${youtubeId}?controls=0&autoplay=1&mute=1&rel=0&modestbranding=1`}
+            src={`https://www.youtube.com/embed/${youtubeId}?controls=0&autoplay=1&mute=0&rel=0&modestbranding=1`}
             title={title}
             allow="autoplay; encrypted-media; fullscreen"
             allowFullScreen

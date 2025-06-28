@@ -234,7 +234,7 @@ const ShootingRange = () => {
 
             {/* Project Image/Video */}
             <CustomVideoPlayer
-              src="https://youtu.be/UqiK5qqsfwE"
+              src="https://www.youtube.com/embed/UqiK5qqsfwE?mute=0"
               title="Shootin Range VR Experience"
               className="aspect-video mb-16"
             />

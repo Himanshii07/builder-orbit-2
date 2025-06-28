@@ -557,8 +557,8 @@ const KedarnathVR = () => {
                     Video Available:
                   </p>
                   <CustomVideoPlayer
-                    src="/videos/Whyyy.mp4"
-                    title=""
+                    src="https://www.youtube.com/watch?v=jYUcd9_ieGw&mute=1"
+                    title="The Neglected Sanctity of Kedarnath"
                     className="aspect-video mb-16"
                   />
                   <p className="text-lg text-center text-red-400 font-semibold">

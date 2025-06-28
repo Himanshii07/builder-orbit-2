@@ -230,7 +230,7 @@ const UnrealCinematic = () => {
 
             {/* Project Image/Video */}
             <CustomVideoPlayer 
-              src="https://youtu.be/NzAuL5I77Vc"
+              src="https://www.youtube.com/embed/NzAuL5I77Vc?mute=0"
               title="Cinematic Envirnonment Showcase"
               className="aspect-video mb-16"
             />

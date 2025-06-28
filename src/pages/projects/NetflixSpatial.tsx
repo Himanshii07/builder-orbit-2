@@ -216,7 +216,7 @@ const NetflixSpatial = () => {
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
               <CustomVideoPlayer
-                src="https://youtu.be/zIOVWQKVdHI"
+                src="https://youtu.be/zIOVWQKVdHI?mute=0"
                 title="Netflix Spatial UI Design"
                 className="aspect-video mb-16"
               />
@@ -224,6 +224,7 @@ const NetflixSpatial = () => {
           </div>
         </div>
       </section>
+
 
       {/* Apple Vision Pro Inspiration */}
       <section className="py-24 bg-muted/20">

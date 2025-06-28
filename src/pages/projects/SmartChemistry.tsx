@@ -293,7 +293,7 @@ const SmartChemistry = () => {
 
             {/* Hero Video/Image Section */}
             <CustomVideoPlayer
-              src="https://youtu.be/92YwKlPZmj8"
+              src="https://www.youtube.com/embed/92YwKlPZmj8?mute=0"
               title="Smart Chemistry AI Recognition Demo"
               className="aspect-video mb-16"
             />

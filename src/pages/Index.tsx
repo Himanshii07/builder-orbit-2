@@ -136,7 +136,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Specializing in Extended Reality
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               From concept to execution, I create cutting-edge XR experiences
               that captivate and inspire.
             </p>
@@ -238,7 +238,7 @@ const Index = () => {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's collaborate on your next XR project and bring your vision to
-            life. ☕{" "}
+            life. {" "}
             <span className="inline-block animate-bounce-subtle">☕</span>
           </p>
 

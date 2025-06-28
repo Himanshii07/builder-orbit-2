@@ -273,7 +273,7 @@ const Savey = () => {
 
             {/* Hero Image/Demo Space */}
             <CustomVideoPlayer
-              src="https://youtu.be/a_lNpr5PO_A"
+              src="https://www.youtube.com/embed/a_lNpr5PO_A?mute=0"
               title="The Interactive Piggy Bank"
               className="aspect-video mb-16"
             />

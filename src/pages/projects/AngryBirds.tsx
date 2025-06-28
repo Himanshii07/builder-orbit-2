@@ -186,7 +186,7 @@ const AngryBirds = () => {
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
               <CustomVideoPlayer
-                src="https://youtu.be/SjZT8W8lbZU"
+                src="https://www.youtube.com/embed/SjZT8W8lbZU?mute=0"
                 title="Angry Birds Recreation Project"
                 className="aspect-video mb-16"
               />

@@ -29,7 +29,7 @@ const Projects = () => {
         "An immersive VR experience that brings ancient mythological stories of Kedarnath to life, allowing users to witness divine tales in a sacred virtual environment.",
       longDescription:
         "This spiritually immersive VR application recreates the sacred pilgrimage site of Kedarnath and tells the ancient mythological stories through interactive narratives. Users can explore the holy temple, witness divine manifestations, and experience the rich cultural heritage of Hindu mythology in a respectful and educational manner.",
-      image: "/placeholder.svg",
+      image: "/Photos/Kedarnath.png",
       tags: ["Unity", "VR", "Storytelling", "Cultural Heritage", "3D Modeling"],
       featured: true,
       year: "2025",
@@ -51,7 +51,7 @@ const Projects = () => {
         "A friendly, expressive piggy bank that reacts to a child's behavior, encouraging them to save not out of obligation, but out of joy. Turns saving into a game using emotional cues, sounds, and interaction.",
       longDescription:
         "Savey is an interactive companion that turns saving into an emotional, sensory, and cognitive experience. With expressive OLED eyes, happy sounds, coin detection, and transparent design, it makes kids want to save more because they enjoy it, not because they have to.",
-      image: "/placeholder.svg",
+      image: "/Photos/Savey.png",
       tags: [
         "Arduino",
         "OLED Display",
@@ -79,7 +79,7 @@ const Projects = () => {
         "A realistic virtual reality shooting simulation that provides safe training environment with physics-based mechanics and multiple weapon systems.",
       longDescription:
         "This VR shooting simulation offers a comprehensive training experience with realistic ballistics, multiple weapon types, and various challenging scenarios. Built with safety and education in mind, it provides an immersive environment for skill development without real-world risks.",
-      image: "/placeholder.svg",
+      image: "/Photos/Shooting range 1.png",
       tags: [
         "Unreal Engine 5",
         "VR",
@@ -135,7 +135,7 @@ const Projects = () => {
         "A dark, atmospheric castle environment designed around fixed cinematic camera movements, featuring gothic architecture, moody lighting, and a warrior character narrative.",
       longDescription:
         "An extracurricular exploration beyond coursework, this Unreal Engine challenge involved creating a 3D environment around predetermined camera sequences. I designed a dark castle with gothic architecture, dramatic lighting, and replaced the original character with a warrior figure to enhance the mysterious, battle-worn storyline.",
-      image: "/placeholder.svg",
+      image: "/Photos/Unreal.png",
       tags: [
         "Unreal Engine 5",
         "Environment Design",
@@ -163,7 +163,7 @@ const Projects = () => {
         "A Blender learning project exploring ocean simulation and atmospheric rendering. An 8-second stormy ocean animation that took 8 hours to render, marking my first journey into 3D animation.",
       longDescription:
         "Out of personal interest, I explored Blender by following a YouTube tutorial and recreated a stormy ocean scene. This self-initiated project helped me understand the basics of Blender's simulation tools, lighting, materials, and camera work. It was an exciting first step into 3D animation and environment creation, giving me a feel for cinematic visuals and mood-building through motion and texture.",
-      image: "/placeholder.svg",
+      image: "/Photos/Stormy Ocean.png",
       tags: [
         "Blender 3D",
         "Ocean Simulation",
@@ -192,7 +192,7 @@ const Projects = () => {
         "An AI-powered educational tool using color-coded element cards and image recognition to make chemistry interactive and fun for students. Real-time compound identification with instant feedback.",
       longDescription:
         "To make chemistry more interactive and fun for students, we designed an AI-powered educational tool using color-coded element cards. Each card represents a chemical element, and students can arrange them to form compounds. Using image recognition, the tool instantly identifies the compound and gives real-time feedback. This hands-on approach helps students visualize and understand chemical combinations better.",
-      image: "/placeholder.svg",
+      image: "/Photos/Smart Chemistry 1.png",
       tags: [
         "Artificial Intelligence",
         "Machine Learning",
@@ -221,7 +221,7 @@ const Projects = () => {
         "A 2D recreation of Angry Birds using Unity with physics-based gameplay, multiple levels, and engaging visual effects. Created as part of Introduction to Coding course.",
       longDescription:
         "As part of the Introduction to Coding course, I developed a 2D version of Angry Birds using Unity. The project involved designing levels, scripting physics-based interactions, and creating an engaging user interface with a home screen. With three distinct levels, the game combined strategy and fun, showcasing gameplay mechanics and visual aesthetics inspired by the classic Angry Birds experience.",
-      image: "/placeholder.svg",
+      image: "/Photos/Angry birds.png",
       tags: [
         "Unity",
         "C#",
@@ -250,7 +250,7 @@ const Projects = () => {
         "Redesigned Netflix app for immersive environments like Apple Vision Pro, creating adaptive interfaces for various physical spaces with spatial awareness.",
       longDescription:
         "Driven by a passion to understand spatial UI design, I embarked on redesigning the Netflix app for immersive environments. The goal was to create a user-friendly interface adaptable to various physical spaces, offering an engaging streaming platform. This project leveraged spatial awareness and interactive design to transform the way users interact with content.",
-      image: "/placeholder.svg",
+      image: "/Photos/Netflix 1.png",
       tags: [
         "Spatial Design",
         "Apple Vision Pro",

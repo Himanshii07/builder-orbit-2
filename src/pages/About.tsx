@@ -41,21 +41,22 @@ const About = () => {
       year: "2024 - 2026",
       role: "M.des Immersive Media Design",
       company: "MIT ADT, Pune",
-      description: "From MIT ADT, Pune. In this I learned about XR.",
+      description:
+        "An intensive design program focused on Extended Reality (XR), combining spatial computing, interaction design, and storytelling. Here, I gained hands-on experience with immersive technologies and developed prototypes that blend physical and digital worlds.",
     },
     {
       year: "2023 - 2024",
       role: "UI/UX Freelancer",
       company: "Various Companies",
       description:
-        "I learned ui/ux from youtube and self learned then i did some freelancing work where I used to design websites for different companies on wordpress, framer, wix, webflow.",
+        "Self-taught in UI/UX design through platforms like YouTube and community forums. I worked with diverse clients to design and build websites using tools like WordPress, Framer, Wix, and Webflow, focusing on responsive layouts, intuitive navigation, and user-centered design.",
     },
     {
       year: "2020 - 2023",
       role: "Bcom Programme",
       company: "Mata Sundri College, Delhi University",
       description:
-        "Business and commerce education providing a strong foundation for understanding project management and client relations.",
+        "A comprehensive education in business and commerce, with a strong foundation in accounting, marketing, and project management. This helped sharpen my understanding of client communication, coordination, and organizational skills—key assets in design project workflows.",
     },
   ];
 
@@ -112,7 +113,6 @@ const About = () => {
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                   <img
-                    
                     src="/Photos/me.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover object-center rounded-2xl"
@@ -125,6 +125,10 @@ const About = () => {
                   className="absolute -bottom-4 -left-4 w-32 h-32 bg-xr-neon/20 rounded-full blur-xl animate-float"
                   style={{ animationDelay: "1s" }}
                 />
+                {/* Cool Person Text */}
+                <div className="mt-4 text-center text-lg text-white font-semibold">
+                  I am a pretty cool person :)
+                </div>
               </div>
 
               {/* Content */}
@@ -181,7 +185,7 @@ const About = () => {
                     className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
                   >
                     <Coffee className="mr-2 h-4 w-4" />
-                    Let's Grab Coffee <span className="ml-1">☕</span>
+                    Let's Grab Coffee <span className="ml-1"></span>
                   </Button>
                 </div>
               </div>
@@ -413,7 +417,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 When I am not glued to my laptop for work
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-6xl mx-auto leading-relaxed">
                 I can often be found exploring the world around me, seeking
                 inspiration from nature, culture and watching Netflix
               </p>
@@ -531,35 +535,22 @@ const About = () => {
                 {
                   id: 1,
                   src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Ff65df03c1ae94121ba01db30ec410ed3?format=webp&width=800",
-                  title: "Krishna Avatar",
-                  description:
-                    "Digital illustration with traditional Indian theme",
                 },
                 {
                   id: 2,
                   src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fbb0c9fb0e17249baa3f46f3472da3f40?format=webp&width=800",
-                  title: "Happy New Year",
-                  description:
-                    "Celebratory digital artwork with human intelligence theme",
                 },
                 {
                   id: 3,
                   src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fc18dcab9917548469d723833a0e195c8?format=webp&width=800",
-                  title: "Thoughtful Moment",
-                  description: "Character illustration with dreamy aesthetic",
                 },
                 {
                   id: 4,
                   src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6658e5b7f3c542aa84e3836cac4ab3bd?format=webp&width=800",
-                  title: "Tropical Paradise",
-                  description:
-                    "Landscape illustration with palm trees and sunset",
                 },
                 {
                   id: 5,
                   src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Faa26438c10a145758ace0a70c8c8e288?format=webp&width=800",
-                  title: "Monument Valley",
-                  description: "Digital landscape with architectural elements",
                 },
               ].map((illustration) => (
                 <Card
@@ -569,18 +560,10 @@ const About = () => {
                   <div className="aspect-square overflow-hidden">
                     <img
                       src={illustration.src}
-                      alt={illustration.title}
+                      alt="Illustration"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <CardContent className="p-4">
-                    <h3 className="font-medium text-foreground mb-1 group-hover:text-xr-neon transition-colors">
-                      {illustration.title}
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      {illustration.description}
-                    </p>
-                  </CardContent>
                 </Card>
               ))}
             </div>
