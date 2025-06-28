@@ -216,7 +216,7 @@ const NetflixSpatial = () => {
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
               <CustomVideoPlayer
-                src="/videos/Netflix.mp4"
+                src="https://youtu.be/zIOVWQKVdHI"
                 title="Netflix Spatial UI Design"
                 className="aspect-video mb-16"
               />

@@ -107,7 +107,7 @@ const Projects = () => {
         "A fantasy 3D environment showcasing the complete production pipeline from Maya modeling to Unreal Engine 5 rendering with hand-painted textures.",
       longDescription:
         "This project demonstrates mastery of the full 3D pipeline including modeling in Maya, UV mapping, hand-painted textures in Substance Painter, rigging and animation, culminating in a magical environment built in Unreal Engine 5 with detailed props and atmospheric lighting.",
-      image: "/placeholder.svg",
+      image: "/Photos/Mushroom.png",
       tags: [
         "Autodesk Maya",
         "Substance Painter",
@@ -331,6 +331,12 @@ const Projects = () => {
               <Link key={project.id} to={`/projects/${project.slug}`}>
                 <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer">
                   <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden">
+                    {/* Project Image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-300 group-hover:scale-105"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     <div className="absolute top-4 left-4">
@@ -433,6 +439,12 @@ const Projects = () => {
               <Link key={project.id} to={`/projects/${project.slug}`}>
                 <Card className="group cursor-pointer overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300">
                   <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden">
+                    {/* Project Image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-300 group-hover:scale-105"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     <div className="absolute top-3 left-3">

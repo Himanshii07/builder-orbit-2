@@ -263,7 +263,7 @@ const StormyOcean = () => {
 
             {/* Hero Video/Image Section */}
             <CustomVideoPlayer
-              src="/videos/Stormy Ocean Blender.mp4"
+              src="https://youtu.be/KLMdJ1UB4Rk"
               title="Dynamic Ocean Waves"
               className="aspect-video mb-16"
             />

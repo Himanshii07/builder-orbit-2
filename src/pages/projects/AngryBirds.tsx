@@ -180,16 +180,16 @@ const AngryBirds = () => {
         </div>
       </section>
 
-      {/* Project Image */}
+      {/* Project Video (YouTube) */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
               <CustomVideoPlayer
-              src="/videos/Angery Birds.mp4"
-              title="Angry Birds Recreation Project"
-              className="aspect-video mb-16"
-            />
+                src="https://youtu.be/SjZT8W8lbZU"
+                title="Angry Birds Recreation Project"
+                className="aspect-video mb-16"
+              />
             </Card>
           </div>
         </div>

@@ -111,27 +111,12 @@ const About = () => {
               <div className="relative group">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-
-                  {/* Default Content */}
-                  <div className="absolute bottom-6 left-6 right-6 transition-opacity duration-500 group-hover:opacity-0">
-                    <div className="flex items-center space-x-2 text-sm text-foreground transition-all duration-300 p-2 rounded-lg hover:bg-xr-neon/10">
-                      <div className="w-2 h-2 bg-xr-neon rounded-full animate-pulse" />
-                      <span>Available for new projects</span>
-                    </div>
-                  </div>
-
-                  {/* Alternate Content on Hover */}
-                  <div className="absolute inset-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="text-center p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-xr-neon/30">
-                      <p className="text-xr-neon font-medium mb-2">
-                        💡 Fun Fact
-                      </p>
-                      <p className="text-sm text-muted-foreground italic">
-                        "I believe the best XR experiences come from
-                        understanding both technology and human psychology."
-                      </p>
-                    </div>
-                  </div>
+                  <img
+                    
+                    src="/Photos/me.jpg"
+                    alt="Profile"
+                    className="w-full h-full object-cover object-center rounded-2xl"
+                  />
                 </div>
 
                 {/* Floating elements */}

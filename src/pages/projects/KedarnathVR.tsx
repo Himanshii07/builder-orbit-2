@@ -355,7 +355,7 @@ const KedarnathVR = () => {
 
             {/* Hero Video Section */}
             <CustomVideoPlayer
-              src="/videos/Trailer Video.mp4"
+              src="https://youtu.be/7_hjT2z4-20"
               title="Immersive Experience of Kedarnath Temple | Trailer Video"
               className="aspect-video mb-16"
             />
