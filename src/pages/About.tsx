@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Download,
   Award,
@@ -24,10 +24,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const About = () => {
+  const [skillsVisible, setSkillsVisible] = useState(false);
+  const skillsRef = useRef<HTMLDivElement>(null);
+
   const skills = [
     { name: "Unreal Engine 5", level: 95 },
     { name: "Unity 3D", level: 88 },
-    { name: "Blender", level: 92 },
+    { name: "Blender", level: 72 },
     { name: "Touch Design", level: 85 },
     { name: "UX/UI Design", level: 90 },
     { name: "Maya", level: 82 },
@@ -56,6 +59,45 @@ const About = () => {
     },
   ];
 
+  // Intersection Observer for skill bars
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setSkillsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, []);
+
+  // Wiggle animation for coffee button every 15 seconds
+  useEffect(() => {
+    const wiggleInterval = setInterval(() => {
+      const coffeeButton = document.getElementById("coffee-button");
+      if (coffeeButton) {
+        coffeeButton.style.animation = "none";
+        setTimeout(() => {
+          coffeeButton.style.animation = "wiggle 1s ease-in-out";
+        }, 100);
+      }
+    }, 15000);
+
+    return () => clearInterval(wiggleInterval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -66,19 +108,28 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Profile Image */}
-              <div className="relative">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/public/Photos/me.jpg"
-                    alt="Profile"
-                    className="object-cover w-full h-full rounded-2xl"
-                    style={{ maxHeight: '100%', maxWidth: '100%' }}
-                  />
+              <div className="relative group">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center space-x-2 text-sm text-foreground">
+
+                  {/* Default Content */}
+                  <div className="absolute bottom-6 left-6 right-6 transition-opacity duration-500 group-hover:opacity-0">
+                    <div className="flex items-center space-x-2 text-sm text-foreground transition-all duration-300 p-2 rounded-lg hover:bg-xr-neon/10">
                       <div className="w-2 h-2 bg-xr-neon rounded-full animate-pulse" />
                       <span>Available for new projects</span>
+                    </div>
+                  </div>
+
+                  {/* Alternate Content on Hover */}
+                  <div className="absolute inset-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="text-center p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-xr-neon/30">
+                      <p className="text-xr-neon font-medium mb-2">
+                        💡 Fun Fact
+                      </p>
+                      <p className="text-sm text-muted-foreground italic">
+                        "I believe the best XR experiences come from
+                        understanding both technology and human psychology."
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -93,14 +144,14 @@ const About = () => {
 
               {/* Content */}
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
                   <Headphones className="w-4 h-4 mr-2 text-xr-neon" />
                   <span className="text-sm font-medium text-xr-neon">
                     XR Design Specialist
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent animate-fade-in">
                   About Me
                 </h1>
 
@@ -123,17 +174,29 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80">
-                    <Download className="mr-2 h-4 w-4" />
+                  <Button className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300">
+                    <Download className="mr-2 h-4 w-4 group-hover:hidden" />
+                    <div className="mr-2 h-4 w-4 hidden group-hover:flex items-center space-x-1">
+                      <div className="w-1 h-1 bg-current rounded-full animate-bounce"></div>
+                      <div
+                        className="w-1 h-1 bg-current rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-1 h-1 bg-current rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
                     Download Resume
                   </Button>
 
                   <Button
+                    id="coffee-button"
                     variant="outline"
-                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground"
+                    className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
                   >
                     <Coffee className="mr-2 h-4 w-4" />
-                    Let's Grab Coffee
+                    Let's Grab Coffee <span className="ml-1">☕</span>
                   </Button>
                 </div>
               </div>
@@ -143,7 +206,7 @@ const About = () => {
       </section>
 
       {/* Technical Skills Section */}
-      <section className="py-24 bg-muted/20">
+      <section className="py-24 bg-muted/20" ref={skillsRef}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -166,7 +229,20 @@ const About = () => {
                       {skill.level}%
                     </span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
+                  <div className="relative h-2 bg-muted rounded-full overflow-hidden">
+                    <div
+                      className={`h-full bg-xr-neon transition-all duration-1500 ease-out ${
+                        skillsVisible ? "animate-fill-bar" : "w-0"
+                      }`}
+                      style={
+                        {
+                          "--target-width": `${skill.level}%`,
+                          width: skillsVisible ? `${skill.level}%` : "0%",
+                          animationDelay: `${index * 0.2}s`,
+                        } as React.CSSProperties
+                      }
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -433,8 +509,6 @@ const About = () => {
               </div>
             </div>
 
-            
-
             {/* Fun Note */}
             <div className="mt-12 text-center">
               <Card className="border-xr-neon/30 bg-gradient-to-r from-xr-neon/5 to-xr-cyber/5 max-w-2xl mx-auto">
@@ -466,25 +540,61 @@ const About = () => {
               </p>
             </div>
 
-            {/* Illustration Grid - Space for images to be added */}
+            {/* Illustration Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
+              {[
+                {
+                  id: 1,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Ff65df03c1ae94121ba01db30ec410ed3?format=webp&width=800",
+                  title: "Krishna Avatar",
+                  description:
+                    "Digital illustration with traditional Indian theme",
+                },
+                {
+                  id: 2,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fbb0c9fb0e17249baa3f46f3472da3f40?format=webp&width=800",
+                  title: "Happy New Year",
+                  description:
+                    "Celebratory digital artwork with human intelligence theme",
+                },
+                {
+                  id: 3,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fc18dcab9917548469d723833a0e195c8?format=webp&width=800",
+                  title: "Thoughtful Moment",
+                  description: "Character illustration with dreamy aesthetic",
+                },
+                {
+                  id: 4,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6658e5b7f3c542aa84e3836cac4ab3bd?format=webp&width=800",
+                  title: "Tropical Paradise",
+                  description:
+                    "Landscape illustration with palm trees and sunset",
+                },
+                {
+                  id: 5,
+                  src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Faa26438c10a145758ace0a70c8c8e288?format=webp&width=800",
+                  title: "Monument Valley",
+                  description: "Digital landscape with architectural elements",
+                },
+              ].map((illustration) => (
                 <Card
-                  key={item}
-                  className="group aspect-square border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer"
+                  key={illustration.id}
+                  className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 cursor-pointer hover:scale-105"
                 >
-                  <CardContent className="p-4 h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-xr-neon/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-xr-neon/20 transition-colors">
-                        <Palette className="w-8 h-8 text-xr-neon" />
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Illustration {item}
-                      </p>
-                      <p className="text-xs text-muted-foreground/70 mt-1">
-                        Space for artwork
-                      </p>
-                    </div>
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={illustration.src}
+                      alt={illustration.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <h3 className="font-medium text-foreground mb-1 group-hover:text-xr-neon transition-colors">
+                      {illustration.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      {illustration.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}

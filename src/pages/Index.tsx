@@ -78,19 +78,19 @@ const Index = () => {
 
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
               <Zap className="w-4 h-4 mr-2 text-xr-neon" />
               <span className="text-sm font-medium text-xr-neon">
                 Pushing the boundaries of reality
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-slide-up">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-fade-in">
               XR Designer
             </h1>
 
             <p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up"
+              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
               Crafting immersive experiences that blur the line between the
@@ -99,13 +99,13 @@ const Index = () => {
             </p>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
               <Button
                 asChild
                 size="lg"
-                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80"
+                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300"
               >
                 <Link to="/projects">
                   View My Work
@@ -117,7 +117,7 @@ const Index = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground"
+                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
               >
                 <Link to="/about">
                   <Play className="mr-2 h-4 w-4" />
@@ -175,7 +175,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
                 Recent Projects
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -199,11 +199,11 @@ const Index = () => {
             {recentProjects.map((project, index) => (
               <Link key={index} to={`/projects/${project.slug}`}>
                 <Card
-                  className={`group cursor-pointer overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}
+                  className={`group cursor-pointer overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift hover-glow animate-fade-in stagger-${index + 1}`}
                 >
                   <div className="aspect-video bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-slide-up">
+                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-fade-in">
                       <span className="text-xs font-medium text-xr-neon bg-xr-neon/10 px-2 py-1 rounded">
                         {project.category}
                       </span>
@@ -233,18 +233,19 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-xr-neon/10 via-background to-xr-cyber/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
             Ready to Create Something Amazing?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's collaborate on your next XR project and bring your vision to
-            life.
+            life. ☕{" "}
+            <span className="inline-block animate-bounce-subtle">☕</span>
           </p>
 
           <Button
             asChild
             size="lg"
-            className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80"
+            className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300"
           >
             <Link to="/contact">
               Get In Touch

@@ -359,13 +359,8 @@ const MushroomHouse = () => {
                 const Icon = step.icon;
                 const isEven = index % 2 === 0;
                 return (
-                  <div
-                    key={index}
-                    className={`flex items-center gap-8 ${
-                      isEven ? "flex-row" : "flex-row-reverse"
-                    }`}
-                  >
-                    <div className="flex-1">
+                  <div key={index} className="flex justify-center">
+                    <div className="max-w-2xl w-full">
                       <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-purple-400/50 transition-all duration-300">
                         <CardContent className="p-8">
                           <div className="flex items-center mb-4">
@@ -397,25 +392,6 @@ const MushroomHouse = () => {
                           </div>
                         </CardContent>
                       </Card>
-                    </div>
-
-                    <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">
-                          {step.step}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="flex-1">
-                      <div className="aspect-video bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-xl flex items-center justify-center">
-                        <div className="text-center">
-                          <Icon className="w-12 h-12 text-purple-400 mb-2 mx-auto" />
-                          <p className="text-sm text-muted-foreground">
-                            Process Video/Images
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 );

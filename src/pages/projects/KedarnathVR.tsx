@@ -557,10 +557,10 @@ const KedarnathVR = () => {
                     Video Available:
                   </p>
                   <CustomVideoPlayer
-              src="/videos/Whyyy.mp4"
-              title=""
-              className="aspect-video mb-16"
-            />
+                    src="/videos/Whyyy.mp4"
+                    title=""
+                    className="aspect-video mb-16"
+                  />
                   <p className="text-lg text-center text-red-400 font-semibold">
                     "The Neglected Sanctity of Kedarnath"
                   </p>
@@ -796,11 +796,11 @@ const KedarnathVR = () => {
               {challenges.map((challenge, index) => (
                 <Card
                   key={index}
-                  className="border-border/50 bg-card/50 backdrop-blur-sm"
+                  className="group border-border/50 bg-card/50 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300"
                 >
                   <CardContent className="p-8">
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div>
+                    <div className="grid md:grid-cols-2 gap-8 relative">
+                      <div className="group-hover:scale-105 transition-transform duration-300">
                         <h3 className="text-xl font-semibold mb-3 text-red-400">
                           Challenge: {challenge.title}
                         </h3>
@@ -808,7 +808,16 @@ const KedarnathVR = () => {
                           {challenge.description}
                         </p>
                       </div>
-                      <div>
+
+                      {/* Animated connecting line */}
+                      <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-8 h-0.5 bg-gradient-to-r from-red-400 to-orange-400 animate-pulse"></div>
+                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                          <div className="w-0 h-0 border-l-4 border-l-orange-400 border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+                        </div>
+                      </div>
+
+                      <div className="group-hover:scale-105 transition-transform duration-300">
                         <h3 className="text-xl font-semibold mb-3 text-orange-400">
                           Solution Approach
                         </h3>
