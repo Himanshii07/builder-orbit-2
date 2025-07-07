@@ -255,11 +255,10 @@ const MushroomHouse = () => {
                 </Button>
               </div>
             </div>
-
-            {/* Hero Video/Image Section */}
+            {/* YouTube Video Showcase */}
             <CustomVideoPlayer
-              src="/videos/Mushroom House.mp4"
-              title="🍄 Mushroom House Environment Showcase"
+              src="https://www.youtube.com/embed/zkfMJK6O_9Y?mute=0"
+              title="Mushroom House YouTube Showcase"
               className="aspect-video mb-16"
             />
           </div>
