@@ -246,7 +246,7 @@ const StormyOcean = () => {
                 </Badge>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white hover:from-blue-500 hover:to-cyan-500"
@@ -278,75 +278,73 @@ const StormyOcean = () => {
       {/* Start of next section */}
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Learning Journey</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  This project marked my very first exploration into Blender,
-                  sparked by curiosity and a desire to understand 3D animation.
-                  Following a YouTube tutorial, I dove into the world of ocean
-                  simulation and atmospheric rendering.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  What started as a simple tutorial follow-along became an
-                  intensive learning experience about Blender's simulation
-                  tools, lighting systems, and rendering pipeline. The project
-                  taught me patience - watching 8 hours of rendering for just 8
-                  seconds of animation!
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  The final result was a dramatic stormy ocean scene that
-                  captured the mood and power of nature, while giving me
-                  invaluable hands-on experience with one of the industry's most
-                  powerful 3D software packages.
-                </p>
-              </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Learning Journey</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              This project marked my very first exploration into Blender,
+              sparked by curiosity and a desire to understand 3D animation.
+              Following a YouTube tutorial, I dove into the world of ocean
+              simulation and atmospheric rendering.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              What started as a simple tutorial follow-along became an
+              intensive learning experience about Blender's simulation
+              tools, lighting systems, and rendering pipeline. The project
+              taught me patience - watching 8 hours of rendering for just 8
+              seconds of animation!
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              The final result was a dramatic stormy ocean scene that
+              captured the mood and power of nature, while giving me
+              invaluable hands-on experience with one of the industry's most
+              powerful 3D software packages.
+            </p>
+          </div>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Learning Focus
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Blender fundamentals through practical application
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Primary Challenge
-                  </h3>
-                  <p className="text-muted-foreground">
-                    First-time Blender user following tutorial guidance
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Time Investment
-                  </h3>
-                  <p className="text-muted-foreground">
-                    One day project + 8 hours rendering time
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Key Techniques
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {technologies.slice(0, 6).map((tech, index) => (
-                      <Badge
-                        key={index}
-                        variant="secondary"
-                        className="text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Learning Focus
+              </h3>
+              <p className="text-muted-foreground">
+                Blender fundamentals through practical application
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Primary Challenge
+              </h3>
+              <p className="text-muted-foreground">
+                First-time Blender user following tutorial guidance
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Time Investment
+              </h3>
+              <p className="text-muted-foreground">
+                One day project + 8 hours rendering time
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Key Techniques
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {technologies.slice(0, 6).map((tech, index) => (
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="text-xs"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Learning Process */}
       <section className="py-24">
@@ -597,6 +595,8 @@ const StormyOcean = () => {
             technology
           </p>
 
+          <div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
