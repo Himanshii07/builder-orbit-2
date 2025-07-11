@@ -273,9 +273,11 @@ const StormyOcean = () => {
             />
           </div>
         </div>
-      </
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+      </section>
+
+      {/* Start of next section */}
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Learning Journey</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -358,7 +360,6 @@ const StormyOcean = () => {
                 Step-by-step journey through my first Blender experience
               </p>
             </div>
-
             <div className="space-y-12">
               {learningSteps.map((step, index) => {
                 const Icon = step.icon;
@@ -623,6 +624,6 @@ const StormyOcean = () => {
       </section>
     </div>
   );
-};
+}
 
 export default StormyOcean;
