@@ -113,13 +113,13 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Profile Image */}
-              <div className="relative group">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500">
+              <div className="relative group animate-fade-in-up">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-xr-neon/20 to-xr-cyber/20 relative overflow-hidden hover:shadow-[0_0_30px_rgba(46,213,115,0.3)] transition-all duration-500 animate-fade-in">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                   <img
                     src="/Photos/me.jpg"
                     alt="Profile"
-                    className="w-full h-full object-cover object-center rounded-2xl"
+                    className="w-full h-full object-cover object-center rounded-2xl scale-100 group-hover:scale-105 transition-transform duration-500 animate-zoom-in"
                   />
                 </div>
 
@@ -130,14 +130,14 @@ const About = () => {
                   style={{ animationDelay: "1s" }}
                 />
                 {/* Cool Person Text */}
-                <div className="mt-4 text-center text-lg text-white font-semibold">
+                <div className="mt-4 text-center text-lg text-white font-semibold animate-fade-in delay-300">
                   I am a pretty cool person :)
                 </div>
               </div>
 
               {/* Content */}
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
+              <div className="animate-fade-in-up delay-150">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-6 hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer animate-fade-in">
                   <Headphones className="w-4 h-4 mr-2 text-xr-neon" />
                   <span className="text-sm font-medium text-xr-neon">
                     XR Design Specialist
@@ -148,25 +148,25 @@ const About = () => {
                   About Me
                 </h1>
 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed animate-fade-in delay-200">
                   I'm a passionate XR designer creating immersive digital
                   experiences. My work spans across virtual reality, augmented
                   reality, and mixed reality applications, with a focus on
                   user-centered design and cutting-edge technology.
                 </p>
 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed animate-fade-in delay-300">
                   I'm skilled at solving complex problems through thoughtful
                   design, integrating everyone's insights to find shared
                   solutions, from strategy to refining user experiences.
                 </p>
 
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in delay-400">
                   My interests are learning new design trends and investing in
                   the stock market.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">
                   <Button className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300">
                     <Download className="mr-2 h-4 w-4 group-hover:hidden" />
                     <div className="mr-2 h-4 w-4 hidden group-hover:flex items-center space-x-1">
@@ -487,14 +487,14 @@ const About = () => {
                   <div className="flex flex-col line-height-normal w-full lg:w-1/3 ml-0">
                     <img
                       loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F33826c0545214937b1ca22be0ab4d783"
-                      className="aspect-[0.66] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945"
+                      className="aspect-[0.67] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
                     />
                   </div>
                   <div className="flex flex-col line-height-normal w-full lg:w-2/3 lg:ml-5 ml-0">
                     <img
                       loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F818cc53174644895a2f24a2fa9e81123"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3"
                       className="aspect-[1.33] object-cover object-center w-full mt-5 min-h-5 min-w-5 overflow-hidden rounded-xl"
                     />
                   </div>

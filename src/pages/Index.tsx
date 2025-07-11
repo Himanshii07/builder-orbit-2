@@ -69,33 +69,33 @@ const Index = () => {
 
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-xr-neon/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-xr-neon/10 rounded-full blur-3xl animate-float animate-fade-in" />
           <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-xr-cyber/10 rounded-full blur-3xl animate-float"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-xr-cyber/10 rounded-full blur-3xl animate-fade-in animate-fade-in"
             style={{ animationDelay: "1s" }}
           />
           <div
-            className="absolute top-1/2 left-1/2 w-64 h-64 bg-xr-void/10 rounded-full blur-3xl animate-float"
+            className="absolute top-1/2 left-1/2 w-64 h-64 bg-xr-void/10 rounded-full blur-3xl animate-float animate-fade-in"
             style={{ animationDelay: "2s" }}
           />
         </div>
 
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in animate-slide-up hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
               <Zap className="w-4 h-4 mr-2 text-xr-neon" />
               <span className="text-sm font-medium text-xr-neon">
                 Pushing the boundaries of reality
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-fade-in">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-fade-in animate-slide-up delay-100">
               XR Designer
             </h1>
 
             <p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
+              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+              style={{ animationDelay: undefined }}
             >
               Crafting immersive experiences that blur the line between the
               physical and digital worlds. Welcome to the future of
@@ -103,8 +103,8 @@ const Index = () => {
             </p>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              style={{ animationDelay: undefined }}
             >
               <Button
                 asChild
@@ -152,7 +152,7 @@ const Index = () => {
               return (
                 <Card
                   key={index}
-                  className={`group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift animate-fade-in stagger-${index + 1}`}
+                  className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift"
                 >
                   <CardContent className="p-8">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors magnetic">
