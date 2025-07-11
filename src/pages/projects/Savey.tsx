@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -32,6 +32,10 @@ import Navigation from "@/components/Navigation";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const Savey = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectDetails = {
     title: "Savey - Interactive Piggy Bank",
     subtitle: "A Friendly Companion That Makes Saving Joyful for Kids",

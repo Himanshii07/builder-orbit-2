@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -43,6 +43,10 @@ import Footer from "@/components/Footer";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const KedarnathVR = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [activeLevel, setActiveLevel] = useState("level1");
 
   const projectDetails = {
@@ -502,7 +506,9 @@ const KedarnathVR = () => {
                     >
                       <CardContent className="p-6">
                         <div className="w-12 h-12 bg-orange-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Icon className="w-6 h-6 text-orange-400" />
+                          <Icon
+                            className={`w-8 h-8 text-orange-400`}
+                          />
                         </div>
                         <h4 className="font-semibold mb-3 text-orange-400">
                           {item.title}
@@ -552,20 +558,60 @@ const KedarnathVR = () => {
                   <p className="text-xl font-medium text-center text-red-400 mb-6">
                     "Because Faith is fading under fame."
                   </p>
-                  <hr className="border-red-400/20 mb-6" />
-                  <p className="text-lg font-medium text-center mb-4">
-                    Video Available:
-                  </p>
-                  <CustomVideoPlayer
-                    src="https://www.youtube.com/watch?v=jYUcd9_ieGw&mute=1"
-                    title="The Neglected Sanctity of Kedarnath"
-                    className="aspect-video mb-16"
-                  />
-                  <p className="text-lg text-center text-red-400 font-semibold">
-                    "The Neglected Sanctity of Kedarnath"
-                  </p>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Collage of news images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+              {/* Cricket match controversy news image */}
+              <div>
+                <img
+                  src="/Photos/kedar 6.png"
+                  alt="News: Cricket match outside Kedarnath Temple sparks outrage over disrespect to sacred site. Video of people playing cricket near the holy shrine draws sharp criticism on social media."
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              {/* Overcrowding news image */}
+              <div>
+                <img
+                  src="/Photos/kedar 5.png"
+                  alt="News: Kedarnath flooded with pilgrims as more than 10 lakh people visit the temple in a short span. Large crowd in front of the temple."
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              {/* Proposal image */}
+              <div>
+                <img
+                  src="/Photos/Kedar 2.png"
+                  alt="YouTuber proposes to her partner at Kedarnath temple, news coverage."
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              {/* Dance/reel controversy image */}
+              <div>
+                <img
+                  src="/Photos/kedar 3.png"
+                  alt="Pilgrims upset as Kedarnath Dham turns into reel shooting and dance ground."
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              {/* Outbreak image */}
+              <div>
+                <img
+                  src="/Photos/kedar 1.png"
+                  alt="News about virus outbreak affecting horses and mules in Kedarnath, May 2025"
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              {/* Helicopter crash news image */}
+              <div>
+                <img
+                  src="/Photos/kedar 4.jpg"
+                  alt="Chopper crash news: At least seven people killed after a helicopter flying from Kedarnath to Guptkashi crashed in Rudraprayag."
+                  className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

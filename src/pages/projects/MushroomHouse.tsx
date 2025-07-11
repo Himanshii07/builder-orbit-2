@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -28,6 +28,10 @@ import Navigation from "@/components/Navigation";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const MushroomHouse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectDetails = {
     title: "The Mushroom House",
     subtitle: "A Fantasy 3D Environment Showcasing Complete Pipeline Mastery",
@@ -257,7 +261,7 @@ const MushroomHouse = () => {
             </div>
             {/* YouTube Video Showcase */}
             <CustomVideoPlayer
-              src="https://www.youtube.com/embed/zkfMJK6O_9Y?mute=0"
+              src="https://youtu.be/zkfMJK6O_9Y?mute=0&autoplay=1"
               title="Mushroom House YouTube Showcase"
               className="aspect-video mb-16"
             />

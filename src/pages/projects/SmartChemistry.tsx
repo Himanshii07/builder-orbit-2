@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -34,6 +34,10 @@ import Navigation from "@/components/Navigation";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const SmartChemistry = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectDetails = {
     title: "Smart Chemistry",
     subtitle: "AI-Powered Educational Tool for Interactive Chemistry Learning",

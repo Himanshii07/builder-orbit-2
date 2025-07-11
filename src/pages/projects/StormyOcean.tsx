@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -28,6 +28,10 @@ import Navigation from "@/components/Navigation";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const StormyOcean = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectDetails = {
     title: "Stormy Ocean Scene",
     subtitle:
@@ -269,11 +273,7 @@ const StormyOcean = () => {
             />
           </div>
         </div>
-      </section>
-
-      {/* Project Overview */}
-      <section className="py-24 bg-gradient-to-r from-blue-900/10 via-background to-cyan-900/10">
-        <div className="container mx-auto px-4">
+      </
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>

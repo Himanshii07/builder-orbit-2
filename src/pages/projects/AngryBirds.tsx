@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -21,6 +21,10 @@ import Footer from "@/components/Footer";
 import CustomVideoPlayer from "@/components/ui/VideoPlayer";
 
 const AngryBirds = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectDetails = {
     title: "Angry Birds Recreation",
     category: "Game Development",

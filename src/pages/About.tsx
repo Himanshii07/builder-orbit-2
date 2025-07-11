@@ -24,6 +24,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [skillsVisible, setSkillsVisible] = useState(false);
   const skillsRef = useRef<HTMLDivElement>(null);
 

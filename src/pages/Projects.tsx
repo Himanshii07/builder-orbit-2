@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ExternalLink,
@@ -17,6 +17,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
