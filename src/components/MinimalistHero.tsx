@@ -20,6 +20,9 @@ const MinimalistHero: React.FC = () => {
       {/* Red margin line */}
       <div className="absolute left-16 top-0 bottom-0 w-px bg-red-300 opacity-40" />
 
+      {/* Hand-drawn illustrations */}
+      <HandDrawnIllustrations />
+
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
