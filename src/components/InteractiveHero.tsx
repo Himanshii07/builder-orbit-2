@@ -316,18 +316,27 @@ const InteractiveHero: React.FC = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-xr-neon via-xr-cyber to-xr-void bg-clip-text text-transparent"
+            className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-xr-neon via-xr-cyber to-xr-void bg-clip-text text-transparent animate-text-glow"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+              scale: [1, 1.02, 1],
             }}
             transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "linear",
+              backgroundPosition: {
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear",
+              },
+              scale: {
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
             }}
             style={{
               backgroundSize: "200% 100%",
             }}
+            whileHover={{ scale: 1.05 }}
           >
             XR Designer
           </motion.h1>
