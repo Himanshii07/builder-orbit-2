@@ -60,37 +60,6 @@ const MinimalistHero: React.FC = () => {
             functionality and aesthetics.
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-            >
-              <Link to="/projects">
-                View Work
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-border text-foreground hover:bg-muted transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-            >
-              <Link to="/about">
-                About Me
-                <Eye className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-
           {/* Scroll indicator */}
           <motion.div
             className="mt-20 flex flex-col items-center"
