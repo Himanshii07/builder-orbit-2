@@ -21,29 +21,6 @@ const About = () => {
       {/* Polaroid Hero Section */}
       <PolaroidHero />
 
-      {/* Interests Section */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-                Things I Love
-              </h2>
-              <p className="text-lg text-muted-foreground font-light">
-                The little things that inspire and fuel my creativity
-              </p>
-            </motion.div>
-
-            <InterestIllustrations />
-          </div>
-        </div>
-      </section>
-
       {/* Life's Great Section - Image Carousel */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -54,7 +31,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
                 Life's Great
               </h2>
               <p className="text-lg text-muted-foreground font-light">
