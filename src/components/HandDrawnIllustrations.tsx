@@ -40,6 +40,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "chai",
+      message: "Chai is my fuel for creativity!",
       svg: (
         <svg width="35" height="40" viewBox="0 0 35 40" fill="none">
           <path
