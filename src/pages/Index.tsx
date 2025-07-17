@@ -202,41 +202,25 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-xr-neon/10 via-background to-xr-cyber/10 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-xr-matrix/10 rounded-full blur-3xl animate-float" />
-          <div
-            className="absolute bottom-0 right-1/4 w-80 h-80 bg-xr-void/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "1.5s" }}
-          />
-          <div
-            className="absolute top-1/2 left-0 w-48 h-48 bg-xr-cyber/10 rounded-full blur-2xl animate-float"
-            style={{ animationDelay: "3s" }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-xr-cyber via-xr-neon to-xr-void bg-clip-text text-transparent animate-shimmer">
-            Ready to Create Something Amazing?
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
+            Let's Work Together
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let's collaborate on your next XR project and bring your vision to
-            life. Join me in pushing the boundaries of digital reality.{" "}
-            <span className="inline-block animate-bounce-subtle text-xr-neon">
-              ✨
-            </span>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed font-light">
+            Have a project in mind? I'd love to help bring your ideas to life
+            through thoughtful design.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               asChild
               size="lg"
-              className="bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-xr-neon/30 group"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
             >
               <Link to="/contact">
                 Get In Touch
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
 
@@ -244,11 +228,11 @@ const Index = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-xr-cyber/30 group"
+              className="border-border text-foreground hover:bg-muted transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
             >
-              <Link to="/projects">
-                View Portfolio
-                <Eye className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+              <Link to="/about">
+                Learn More
+                <Eye className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
