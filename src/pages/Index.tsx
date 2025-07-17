@@ -84,6 +84,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Values Section */}
+      <ValuesSection />
+
       {/* Recent Projects Preview */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4">
