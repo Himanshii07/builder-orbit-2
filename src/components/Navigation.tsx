@@ -38,13 +38,8 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-pulse-glow transition-all magnetic">
-                <span className="font-bold text-sm text-black animate-fade-in">
-                  HP
-                </span>
-              </div>
-              <span className="font-display font-bold text-lg text-foreground group-hover:text-xr-neon transition-colors animate-slide-in-left">
-                Himanshi Puri
+              <span className="font-display font-normal text-lg text-foreground transition-colors">
+                XR Designer
               </span>
             </Link>
 
