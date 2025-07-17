@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InteractiveHero from "@/components/InteractiveHero";
 
 const Index = () => {
   useEffect(() => {
@@ -242,8 +243,7 @@ const Index = () => {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's collaborate on your next XR project and bring your vision to
-            life. {" "}
-            <span className="inline-block animate-bounce-subtle">☕</span>
+            life. <span className="inline-block animate-bounce-subtle">☕</span>
           </p>
 
           <Button
