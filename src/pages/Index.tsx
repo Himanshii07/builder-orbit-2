@@ -62,8 +62,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Interactive Hero Section */}
-      <InteractiveHero />
+      {/* Minimalist Hero Section */}
+      <MinimalistHero />
 
       {/* Features Section */}
       <section className="py-24 bg-gradient-to-b from-background via-xr-void/5 to-muted/20 relative overflow-hidden">
