@@ -52,18 +52,16 @@ const Navigation = () => {
                     key={item.path}
                     to={item.path}
                     className={cn(
-                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 group hover-scale animate-slide-in-right",
+                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200",
                       isActive
-                        ? "text-xr-neon"
+                        ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground",
-                      `stagger-${index + 1}`,
                     )}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent animate-shimmer" />
+                      <span className="absolute inset-x-0 -bottom-px h-px bg-foreground" />
                     )}
-                    <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
                   </Link>
                 );
               })}
