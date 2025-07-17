@@ -64,75 +64,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-xr-neon/5" />
-
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-xr-neon/10 rounded-full blur-3xl animate-float animate-fade-in" />
-          <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-xr-cyber/10 rounded-full blur-3xl animate-fade-in animate-fade-in"
-            style={{ animationDelay: "1s" }}
-          />
-          <div
-            className="absolute top-1/2 left-1/2 w-64 h-64 bg-xr-void/10 rounded-full blur-3xl animate-float animate-fade-in"
-            style={{ animationDelay: "2s" }}
-          />
-        </div>
-
-        <div className="relative container mx-auto px-4 py-24 md:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-xr-neon/10 border border-xr-neon/20 mb-8 animate-fade-in animate-slide-up hover:bg-xr-neon/20 transition-all duration-300 cursor-pointer">
-              <Zap className="w-4 h-4 mr-2 text-xr-neon" />
-              <span className="text-sm font-medium text-xr-neon">
-                Pushing the boundaries of reality
-              </span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-xr-neon to-xr-cyber bg-clip-text text-transparent animate-fade-in animate-slide-up delay-100">
-              XR Designer
-            </h1>
-
-            <p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
-              style={{ animationDelay: undefined }}
-            >
-              Crafting immersive experiences that blur the line between the
-              physical and digital worlds. Welcome to the future of
-              human-computer interaction.
-            </p>
-
-            <div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              style={{ animationDelay: undefined }}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="group bg-xr-neon text-xr-neon-foreground hover:bg-xr-neon/80 transition-all duration-300"
-              >
-                <Link to="/projects">
-                  View My Work
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="group border-xr-cyber text-xr-cyber hover:bg-xr-cyber hover:text-xr-cyber-foreground transition-all duration-300"
-              >
-                <Link to="/about">
-                  <Play className="mr-2 h-4 w-4" />
-                  About Me
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Interactive Hero Section */}
+      <InteractiveHero />
 
       {/* Features Section */}
       <section className="py-24 bg-gradient-to-b from-background to-muted/20">
