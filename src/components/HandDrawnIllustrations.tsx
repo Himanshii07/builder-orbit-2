@@ -69,6 +69,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "rajma-chawal",
+      message: "Comfort food = creative mind!",
       svg: (
         <svg width="45" height="35" viewBox="0 0 45 35" fill="none">
           <ellipse
