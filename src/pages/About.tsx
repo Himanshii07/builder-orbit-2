@@ -67,7 +67,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <ImageCarousel />
+              <HorizontalCarousel />
             </motion.div>
           </div>
         </div>
