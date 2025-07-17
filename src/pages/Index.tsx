@@ -125,34 +125,25 @@ const Index = () => {
       </section>
 
       {/* Recent Projects Preview */}
-      <section className="py-24 relative overflow-hidden">
-        {/* Grid pattern background */}
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--xr-neon)) 1px, transparent 0)`,
-            backgroundSize: "50px 50px",
-          }}
-        />
-
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in bg-gradient-to-r from-xr-cyber via-xr-neon to-xr-matrix bg-clip-text text-transparent">
-                Recent Projects
+              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+                Recent Work
               </h2>
-              <p className="text-lg text-muted-foreground">
-                A glimpse into my latest XR creations
+              <p className="text-lg text-muted-foreground font-light">
+                A selection of projects I've worked on
               </p>
             </div>
 
             <Button
               asChild
               variant="outline"
-              className="border-xr-neon text-xr-neon hover:bg-xr-neon hover:text-xr-neon-foreground hover:shadow-lg hover:shadow-xr-neon/25 transition-all duration-300 group"
+              className="border-border text-foreground hover:bg-muted transition-all duration-300 group rounded-full px-6"
             >
               <Link to="/projects">
-                View All Projects
+                View All
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
