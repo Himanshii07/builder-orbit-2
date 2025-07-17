@@ -91,6 +91,11 @@
       sans-serif;
     font-weight: 400;
   }
+
+  .font-handwriting {
+    font-family: "Kalam", "Comic Sans MS", cursive;
+    transform: rotate(-1deg);
+  }
 }
 
 /* Clean Minimalist Animations */
