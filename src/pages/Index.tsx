@@ -165,44 +165,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
-            Let's Work Together
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed font-light">
-            Have a project in mind? I'd love to help bring your ideas to life
-            through thoughtful design.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-            >
-              <Link to="/contact">
-                Get In Touch
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-border text-foreground hover:bg-muted transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-            >
-              <Link to="/about">
-                Learn More
-                <Eye className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
