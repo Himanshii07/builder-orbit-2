@@ -82,19 +82,75 @@ const InteractiveHero: React.FC = () => {
     >
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-xr-neon/30 rounded-full"
+            className={`absolute rounded-full ${
+              i % 3 === 0
+                ? "w-1 h-1 bg-xr-neon/30"
+                : i % 3 === 1
+                  ? "w-2 h-2 bg-xr-cyber/20"
+                  : "w-1.5 h-1.5 bg-xr-void/25"
+            }`}
             animate={{
-              x: [0, Math.random() * window.innerWidth],
-              y: [0, Math.random() * window.innerHeight],
+              x: [
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerWidth : 1200),
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerWidth : 1200),
+              ],
+              y: [
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerHeight : 800),
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerHeight : 800),
+              ],
               opacity: [0, 1, 0],
+              scale: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: Math.random() * 15 + 10,
               repeat: Infinity,
               delay: Math.random() * 5,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
+        {/* Floating geometric shapes */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={`shape-${i}`}
+            className={`absolute ${
+              i % 4 === 0
+                ? "w-8 h-8 bg-xr-neon/10 rotate-45"
+                : i % 4 === 1
+                  ? "w-6 h-6 bg-xr-cyber/10 rounded-full"
+                  : i % 4 === 2
+                    ? "w-10 h-1 bg-xr-void/10"
+                    : "w-4 h-8 bg-xr-matrix/10"
+            }`}
+            animate={{
+              x: [
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerWidth : 1200),
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerWidth : 1200),
+              ],
+              y: [
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerHeight : 800),
+                Math.random() *
+                  (typeof window !== "undefined" ? window.innerHeight : 800),
+              ],
+              rotate: [0, 360],
+              opacity: [0.2, 0.8, 0.2],
+            }}
+            transition={{
+              duration: Math.random() * 20 + 15,
+              repeat: Infinity,
+              delay: Math.random() * 8,
+              ease: "linear",
             }}
           />
         ))}
