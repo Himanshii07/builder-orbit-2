@@ -66,99 +66,56 @@ const Index = () => {
       <MinimalistHero />
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-background via-xr-void/5 to-muted/20 relative overflow-hidden">
-        {/* Animated background shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-xr-cyber/10 rounded-full blur-2xl animate-float" />
-          <div
-            className="absolute bottom-20 right-20 w-48 h-48 bg-xr-matrix/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          />
-          <div
-            className="absolute top-1/2 left-1/3 w-24 h-24 bg-xr-neon/10 rounded-full blur-xl animate-float"
-            style={{ animationDelay: "4s" }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-xr-neon via-xr-cyber to-xr-void bg-clip-text text-transparent animate-shimmer">
-              Specializing in Extended Reality
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+              What I Focus On
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From concept to execution, I create cutting-edge XR experiences
-              that captivate and inspire.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              Creating meaningful experiences through thoughtful design
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {features.map((feature, index) => {
               const Icon = feature.icon;
-              const colorClasses = [
-                {
-                  border: "hover:border-xr-neon/50",
-                  bg: "bg-xr-neon/10 group-hover:bg-xr-neon/20",
-                  text: "text-xr-neon group-hover:text-xr-neon",
-                  shadow: "group-hover:shadow-xr-neon/30",
-                  accent:
-                    "bg-gradient-to-r from-xr-neon/0 via-xr-neon/50 to-xr-neon/0",
-                  glow: "bg-gradient-to-r from-xr-neon/0 via-xr-neon/20 to-xr-neon/0",
-                },
-                {
-                  border: "hover:border-xr-cyber/50",
-                  bg: "bg-xr-cyber/10 group-hover:bg-xr-cyber/20",
-                  text: "text-xr-cyber group-hover:text-xr-cyber",
-                  shadow: "group-hover:shadow-xr-cyber/30",
-                  accent:
-                    "bg-gradient-to-r from-xr-cyber/0 via-xr-cyber/50 to-xr-cyber/0",
-                  glow: "bg-gradient-to-r from-xr-cyber/0 via-xr-cyber/20 to-xr-cyber/0",
-                },
-                {
-                  border: "hover:border-xr-void/50",
-                  bg: "bg-xr-void/10 group-hover:bg-xr-void/20",
-                  text: "text-xr-void group-hover:text-xr-void",
-                  shadow: "group-hover:shadow-xr-void/30",
-                  accent:
-                    "bg-gradient-to-r from-xr-void/0 via-xr-void/50 to-xr-void/0",
-                  glow: "bg-gradient-to-r from-xr-void/0 via-xr-void/20 to-xr-void/0",
-                },
-              ];
-              const currentColors = colorClasses[index];
+              const colors = ["minimal-sage", "minimal-warm", "minimal-cool"];
+              const currentColor = colors[index];
 
               return (
                 <Card
                   key={index}
-                  className={`group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm ${currentColors.border} transition-all duration-500 hover-lift hover-tilt stagger-${index + 1} animate-fade-in`}
-                  style={{ transformStyle: "preserve-3d" }}
+                  className="group border border-border/50 bg-card hover:border-border transition-all duration-300 hover:shadow-lg hover:shadow-black/5"
                 >
-                  {/* Glowing border effect */}
-                  <div
-                    className={`absolute inset-0 ${currentColors.glow} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg`}
-                  />
-
-                  <CardContent className="p-8 relative z-10">
+                  <CardContent className="p-8 text-center">
                     <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${currentColors.bg} mb-6 group-hover:scale-110 transition-all duration-300 magnetic shadow-lg ${currentColors.shadow}`}
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 transition-colors duration-300 ${
+                        currentColor === "minimal-sage"
+                          ? "bg-minimal-sage/20 group-hover:bg-minimal-sage/30"
+                          : currentColor === "minimal-warm"
+                            ? "bg-minimal-warm/20 group-hover:bg-minimal-warm/30"
+                            : "bg-minimal-cool/20 group-hover:bg-minimal-cool/30"
+                      }`}
                     >
                       <Icon
-                        className={`h-8 w-8 ${currentColors.text} group-hover:animate-pulse`}
+                        className={`h-8 w-8 transition-transform duration-300 group-hover:scale-110 ${
+                          currentColor === "minimal-sage"
+                            ? "text-minimal-sage"
+                            : currentColor === "minimal-warm"
+                              ? "text-minimal-warm"
+                              : "text-minimal-cool"
+                        }`}
                       />
                     </div>
 
-                    <h3
-                      className={`text-xl font-semibold mb-3 ${currentColors.text} transition-colors duration-300`}
-                    >
+                    <h3 className="text-xl font-normal text-foreground mb-3">
                       {feature.title}
                     </h3>
 
-                    <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                    <p className="text-muted-foreground leading-relaxed font-light">
                       {feature.description}
                     </p>
-
-                    {/* Animated accent line */}
-                    <div
-                      className={`mt-4 h-1 ${currentColors.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-full`}
-                    />
                   </CardContent>
                 </Card>
               );
