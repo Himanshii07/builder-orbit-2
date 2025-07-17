@@ -184,7 +184,13 @@ const InteractiveHero: React.FC = () => {
               >
                 {/* Icon container */}
                 <motion.div
-                  className={`w-full h-full rounded-full bg-gradient-to-br from-${section.color}/20 to-${section.color}/40 border border-${section.color}/50 flex items-center justify-center backdrop-blur-sm`}
+                  className={`w-full h-full rounded-full flex items-center justify-center backdrop-blur-sm ${
+                    section.color === "xr-neon"
+                      ? "bg-gradient-to-br from-xr-neon/20 to-xr-neon/40 border border-xr-neon/50"
+                      : section.color === "xr-cyber"
+                        ? "bg-gradient-to-br from-xr-cyber/20 to-xr-cyber/40 border border-xr-cyber/50"
+                        : "bg-gradient-to-br from-xr-void/20 to-xr-void/40 border border-xr-void/50"
+                  }`}
                   animate={{
                     boxShadow:
                       hoveredSection === section.id
@@ -192,7 +198,15 @@ const InteractiveHero: React.FC = () => {
                         : `0 0 10px hsl(var(--${section.color}) / 0.2)`,
                   }}
                 >
-                  <Icon className={`w-8 h-8 text-${section.color}`} />
+                  <Icon
+                    className={`w-8 h-8 ${
+                      section.color === "xr-neon"
+                        ? "text-xr-neon"
+                        : section.color === "xr-cyber"
+                          ? "text-xr-cyber"
+                          : "text-xr-void"
+                    }`}
+                  />
                 </motion.div>
 
                 {/* Info popup */}
