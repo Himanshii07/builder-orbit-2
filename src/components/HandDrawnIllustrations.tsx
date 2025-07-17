@@ -423,17 +423,12 @@ const HandDrawnIllustrations: React.FC = () => {
               ease: "easeInOut",
               delay: Math.random() * 2,
             }}
+            style={{ filter: "drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1))" }}
           >
             {illustration.svg}
           </motion.div>
         </motion.div>
       ))}
-
-      <style jsx>{`
-        .hand-drawn {
-          filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
-        }
-      `}</style>
     </div>
   );
 };
