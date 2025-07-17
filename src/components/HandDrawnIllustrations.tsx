@@ -393,6 +393,25 @@ const HandDrawnIllustrations: React.FC = () => {
           >
             {illustration.svg}
           </motion.div>
+
+          {/* Tooltip */}
+          {hoveredIllustration === illustration.name && (
+            <motion.div
+              className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-20"
+              initial={{ opacity: 0, y: -10, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="bg-background/90 backdrop-blur-sm border border-border rounded-lg px-3 py-2 shadow-lg whitespace-nowrap">
+                <p className="text-sm text-foreground font-light">
+                  {illustration.message}
+                </p>
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                  <div className="w-2 h-2 bg-background border-r border-b border-border rotate-45 transform translate-y-[-1px]"></div>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </motion.div>
       ))}
     </div>
