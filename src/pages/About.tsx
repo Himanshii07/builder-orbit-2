@@ -18,63 +18,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
-              className="text-6xl md:text-8xl lg:text-9xl font-light text-foreground mb-8 tracking-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              himanshi
-            </motion.h1>
-
-            <motion.p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              curious + creative + consistent
-            </motion.p>
-
-            <motion.p
-              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed font-light"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              A designer who believes in designing with a purpose while
-              balancing functionality and aesthetics.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-6 text-base font-normal">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                className="border-border text-foreground hover:bg-muted transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-              >
-                <Link to="/contact">
-                  Get In Touch
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Polaroid Hero Section */}
+      <PolaroidHero />
 
       {/* Interests Section */}
       <section className="py-24 bg-muted/20">
