@@ -149,56 +149,49 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {recentProjects.map((project, index) => {
-              const gradients = [
-                "from-xr-neon/20 to-xr-cyber/20",
-                "from-xr-cyber/20 to-xr-void/20",
-                "from-xr-void/20 to-xr-matrix/20",
-              ];
+              const colors = ["minimal-sage", "minimal-warm", "minimal-cool"];
+              const currentColor = colors[index];
 
               return (
                 <Link key={index} to={`/projects/${project.slug}`}>
-                  <Card
-                    className={`group cursor-pointer overflow-hidden border-border/50 bg-card/30 backdrop-blur-md hover:border-xr-neon/50 transition-all duration-500 hover-lift hover-glow animate-fade-in stagger-${index + 1} hover:bg-card/60`}
-                  >
+                  <Card className="group cursor-pointer overflow-hidden border border-border/50 bg-card hover:border-border transition-all duration-300 hover:shadow-lg hover:shadow-black/5">
                     <div
-                      className={`aspect-video bg-gradient-to-br ${gradients[index]} relative overflow-hidden`}
+                      className={`aspect-video relative overflow-hidden ${
+                        currentColor === "minimal-sage"
+                          ? "bg-minimal-sage/10"
+                          : currentColor === "minimal-warm"
+                            ? "bg-minimal-warm/10"
+                            : "bg-minimal-cool/10"
+                      }`}
                     >
-                      {/* Animated mesh gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
                       {/* Project category badge */}
-                      <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                        <span className="text-xs font-medium text-xr-neon bg-xr-neon/20 backdrop-blur-sm px-3 py-1 rounded-full border border-xr-neon/30">
+                      <div className="absolute top-4 left-4">
+                        <span className="text-xs font-normal text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full border border-border/50">
                           {project.category}
                         </span>
                       </div>
 
-                      {/* Floating orbs */}
+                      {/* Simple accent dot */}
                       <div
-                        className="absolute top-4 right-4 w-6 h-6 bg-xr-cyber/30 rounded-full blur-sm animate-float"
-                        style={{ animationDelay: `${index * 0.5}s` }}
+                        className={`absolute bottom-4 right-4 w-3 h-3 rounded-full ${
+                          currentColor === "minimal-sage"
+                            ? "bg-minimal-sage/60"
+                            : currentColor === "minimal-warm"
+                              ? "bg-minimal-warm/60"
+                              : "bg-minimal-cool/60"
+                        }`}
                       />
-                      <div
-                        className="absolute top-8 right-12 w-4 h-4 bg-xr-neon/40 rounded-full blur-sm animate-float"
-                        style={{ animationDelay: `${index * 0.5 + 1}s` }}
-                      />
-
-                      {/* Hover effects */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-xr-neon/0 via-xr-neon/5 to-xr-neon/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
 
-                    <CardContent className="p-6 relative">
-                      <h3 className="text-xl font-semibold mb-2 group-hover:text-xr-neon transition-colors duration-300 group-hover:translate-x-1 transform">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-normal text-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/70 transition-colors duration-300">
+                      <p className="text-muted-foreground text-sm leading-relaxed font-light">
                         {project.description}
                       </p>
-
-                      {/* Animated underline */}
-                      <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-gradient-to-r from-xr-neon/0 via-xr-neon/50 to-xr-neon/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
                     </CardContent>
                   </Card>
                 </Link>
