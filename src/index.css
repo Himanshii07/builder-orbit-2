@@ -165,14 +165,14 @@
   animation: subtle-bounce 3s ease-in-out infinite;
 }
 
-/* Hover Animations */
+/* Minimalist Hover Effects */
 .hover-lift {
   transition: all 0.3s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .hover-scale {
@@ -180,23 +180,7 @@
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
-}
-
-.hover-glow {
-  transition: all 0.3s ease;
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 20px hsl(var(--xr-neon) / 0.4);
-}
-
-.hover-tilt {
-  transition: transform 0.3s ease;
-}
-
-.hover-tilt:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  transform: scale(1.02);
 }
 
 /* Stagger Animation Delays */
