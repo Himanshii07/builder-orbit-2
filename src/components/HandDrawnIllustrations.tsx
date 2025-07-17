@@ -99,6 +99,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "dog",
+      message: "Dogs make everything better!",
       svg: (
         <svg width="50" height="40" viewBox="0 0 50 40" fill="none">
           <ellipse
@@ -163,6 +164,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "car",
+      message: "Road trips fuel my wanderlust!",
       svg: (
         <svg width="55" height="30" viewBox="0 0 55 30" fill="none">
           <path
@@ -214,6 +216,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "earphones",
+      message: "Music is my design companion!",
       svg: (
         <svg width="40" height="45" viewBox="0 0 40 45" fill="none">
           <path
@@ -259,6 +262,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "swings",
+      message: "Simple joys inspire great ideas!",
       svg: (
         <svg width="50" height="45" viewBox="0 0 50 45" fill="none">
           <path
@@ -312,6 +316,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "travel",
+      message: "New places, fresh perspectives!",
       svg: (
         <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
           <rect
