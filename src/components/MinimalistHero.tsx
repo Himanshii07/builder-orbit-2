@@ -32,7 +32,7 @@ const MinimalistHero: React.FC = () => {
         >
           {/* Main heading */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mb-6 tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-heading text-foreground mb-6 tracking-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,7 +42,7 @@ const MinimalistHero: React.FC = () => {
 
           {/* Subtitle */}
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground mb-8 font-light tracking-wide"
+            className="text-lg md:text-xl text-muted-foreground mb-4 font-light tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
