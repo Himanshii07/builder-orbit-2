@@ -60,7 +60,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-8">
                 A Little More About Me
               </h2>
 
