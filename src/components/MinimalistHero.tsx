@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight, Eye } from "lucide-react";
+import HandDrawnIllustrations from "./HandDrawnIllustrations";
 
 const MinimalistHero: React.FC = () => {
   return (
