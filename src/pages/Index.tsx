@@ -93,7 +93,7 @@ const Index = () => {
           <div className="flex items-center justify-between mb-16">
             <div>
               <TangledBallAnimation />
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
                 Untangling Problems Into Beautiful Solutions
               </h2>
               <p className="text-lg text-muted-foreground font-light">
