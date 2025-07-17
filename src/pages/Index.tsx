@@ -7,6 +7,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MinimalistHero from "@/components/MinimalistHero";
 import FlipCards from "@/components/FlipCards";
+import ValuesSection from "@/components/ValuesSection";
+import TangledBallAnimation from "@/components/TangledBallAnimation";
 
 const Index = () => {
   useEffect(() => {
