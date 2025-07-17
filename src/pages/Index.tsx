@@ -68,10 +68,23 @@ const Index = () => {
       <InteractiveHero />
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-b from-background via-xr-void/5 to-muted/20 relative overflow-hidden">
+        {/* Animated background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-xr-cyber/10 rounded-full blur-2xl animate-float" />
+          <div
+            className="absolute bottom-20 right-20 w-48 h-48 bg-xr-matrix/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
+          />
+          <div
+            className="absolute top-1/2 left-1/3 w-24 h-24 bg-xr-neon/10 rounded-full blur-xl animate-float"
+            style={{ animationDelay: "4s" }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-xr-neon via-xr-cyber to-xr-void bg-clip-text text-transparent animate-shimmer">
               Specializing in Extended Reality
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -83,23 +96,43 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
+              const colors = ["xr-neon", "xr-cyber", "xr-void"];
+              const currentColor = colors[index];
+
               return (
                 <Card
                   key={index}
-                  className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-xr-neon/50 transition-all duration-300 hover-lift"
+                  className={`group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-${currentColor}/50 transition-all duration-500 hover-lift hover-tilt stagger-${index + 1} animate-fade-in`}
+                  style={{ transformStyle: "preserve-3d" }}
                 >
-                  <CardContent className="p-8">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-xr-neon/10 mb-6 group-hover:bg-xr-neon/20 transition-colors magnetic">
-                      <Icon className="h-6 w-6 text-xr-neon animate-bounce-subtle" />
+                  {/* Glowing border effect */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r from-${currentColor}/0 via-${currentColor}/20 to-${currentColor}/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg`}
+                  />
+
+                  <CardContent className="p-8 relative z-10">
+                    <div
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-${currentColor}/10 mb-6 group-hover:bg-${currentColor}/20 group-hover:scale-110 transition-all duration-300 magnetic shadow-lg group-hover:shadow-${currentColor}/30`}
+                    >
+                      <Icon
+                        className={`h-8 w-8 text-${currentColor} group-hover:animate-pulse`}
+                      />
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-xr-neon transition-colors">
+                    <h3
+                      className={`text-xl font-semibold mb-3 group-hover:text-${currentColor} transition-colors duration-300`}
+                    >
                       {feature.title}
                     </h3>
 
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                       {feature.description}
                     </p>
+
+                    {/* Animated accent line */}
+                    <div
+                      className={`mt-4 h-1 bg-gradient-to-r from-${currentColor}/0 via-${currentColor}/50 to-${currentColor}/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-full`}
+                    />
                   </CardContent>
                 </Card>
               );
