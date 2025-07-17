@@ -71,57 +71,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              What I Focus On
+              What I Do
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-              Creating meaningful experiences through thoughtful design
+              Hover over the cards to see more details
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              const colors = ["minimal-sage", "minimal-warm", "minimal-cool"];
-              const currentColor = colors[index];
-
-              return (
-                <Card
-                  key={index}
-                  className="group border border-border/50 bg-card hover:border-border transition-all duration-300 hover:shadow-lg hover:shadow-black/5"
-                >
-                  <CardContent className="p-8 text-center">
-                    <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 transition-colors duration-300 ${
-                        currentColor === "minimal-sage"
-                          ? "bg-minimal-sage/20 group-hover:bg-minimal-sage/30"
-                          : currentColor === "minimal-warm"
-                            ? "bg-minimal-warm/20 group-hover:bg-minimal-warm/30"
-                            : "bg-minimal-cool/20 group-hover:bg-minimal-cool/30"
-                      }`}
-                    >
-                      <Icon
-                        className={`h-8 w-8 transition-transform duration-300 group-hover:scale-110 ${
-                          currentColor === "minimal-sage"
-                            ? "text-minimal-sage"
-                            : currentColor === "minimal-warm"
-                              ? "text-minimal-warm"
-                              : "text-minimal-cool"
-                        }`}
-                      />
-                    </div>
-
-                    <h3 className="text-xl font-normal text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-
-                    <p className="text-muted-foreground leading-relaxed font-light">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+          <FlipCards />
         </div>
       </section>
 
