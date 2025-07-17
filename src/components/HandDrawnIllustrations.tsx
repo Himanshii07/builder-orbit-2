@@ -36,13 +36,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "chai",
       svg: (
-        <svg
-          width="35"
-          height="40"
-          viewBox="0 0 35 40"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="35" height="40" viewBox="0 0 35 40" fill="none">
           <path
             d="M8 12 Q8 8 12 8 L23 8 Q27 8 27 12 L27 25 Q27 30 22 30 L13 30 Q8 30 8 25 Z"
             stroke="currentColor"
@@ -70,13 +64,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "rajma-chawal",
       svg: (
-        <svg
-          width="45"
-          height="35"
-          viewBox="0 0 45 35"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="45" height="35" viewBox="0 0 45 35" fill="none">
           <ellipse
             cx="22"
             cy="20"
@@ -105,13 +93,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "dog",
       svg: (
-        <svg
-          width="50"
-          height="40"
-          viewBox="0 0 50 40"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="50" height="40" viewBox="0 0 50 40" fill="none">
           <ellipse
             cx="25"
             cy="25"
@@ -175,13 +157,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "car",
       svg: (
-        <svg
-          width="55"
-          height="30"
-          viewBox="0 0 55 30"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="55" height="30" viewBox="0 0 55 30" fill="none">
           <path
             d="M8 18 L8 22 Q8 24 10 24 L45 24 Q47 24 47 22 L47 18 Q47 15 44 12 L38 8 Q35 6 32 6 L23 6 Q20 6 17 8 L11 12 Q8 15 8 18 Z"
             stroke="currentColor"
@@ -232,13 +208,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "earphones",
       svg: (
-        <svg
-          width="40"
-          height="45"
-          viewBox="0 0 40 45"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="40" height="45" viewBox="0 0 40 45" fill="none">
           <path
             d="M20 8 Q12 8 8 15 Q8 25 12 30"
             stroke="currentColor"
@@ -283,13 +253,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "swings",
       svg: (
-        <svg
-          width="50"
-          height="45"
-          viewBox="0 0 50 45"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="50" height="45" viewBox="0 0 50 45" fill="none">
           <path
             d="M5 8 L45 8"
             stroke="currentColor"
@@ -342,13 +306,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "travel",
       svg: (
-        <svg
-          width="40"
-          height="50"
-          viewBox="0 0 40 50"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
           <rect
             x="8"
             y="15"
