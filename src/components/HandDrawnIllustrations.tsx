@@ -6,13 +6,7 @@ const HandDrawnIllustrations: React.FC = () => {
     {
       name: "netflix",
       svg: (
-        <svg
-          width="40"
-          height="30"
-          viewBox="0 0 40 30"
-          fill="none"
-          className="hand-drawn"
-        >
+        <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
           <rect
             x="2"
             y="3"
