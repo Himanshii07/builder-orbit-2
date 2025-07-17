@@ -365,7 +365,7 @@ const HandDrawnIllustrations: React.FC = () => {
       {illustrations.map((illustration, index) => (
         <motion.div
           key={illustration.name}
-          className={`absolute ${illustration.color}`}
+          className={`absolute ${illustration.color} cursor-pointer`}
           style={illustration.position}
           initial={{ opacity: 0, scale: 0, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: Math.random() * 20 - 10 }}
@@ -375,6 +375,8 @@ const HandDrawnIllustrations: React.FC = () => {
             ease: "easeOut",
           }}
           whileHover={{ scale: 1.1, rotate: 0 }}
+          onHoverStart={() => setHoveredIllustration(illustration.name)}
+          onHoverEnd={() => setHoveredIllustration(null)}
         >
           <motion.div
             animate={{
