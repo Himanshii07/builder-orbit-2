@@ -7,14 +7,20 @@ import { ArrowRight, Eye } from "lucide-react";
 const MinimalistHero: React.FC = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden">
-      {/* Subtle background pattern */}
+      {/* Dotted notebook background */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
-          backgroundImage: `radial-gradient(circle at 20px 20px, hsl(var(--foreground)) 1px, transparent 0)`,
-          backgroundSize: "40px 40px",
+          backgroundImage: `
+            radial-gradient(circle at 2px 2px, hsl(var(--muted-foreground)) 1px, transparent 0),
+            linear-gradient(to bottom, transparent 23px, hsl(var(--muted-foreground)) 24px, hsl(var(--muted-foreground)) 25px, transparent 26px)
+          `,
+          backgroundSize: "24px 24px, 100% 24px",
         }}
       />
+
+      {/* Red margin line */}
+      <div className="absolute left-16 top-0 bottom-0 w-px bg-red-300 opacity-40" />
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
