@@ -15,21 +15,19 @@ const Index = () => {
   const features = [
     {
       icon: Eye,
-      title: "Creating VR Experiences",
+      title: "Visual Design",
       description:
-        "Immersive experiences that transport users to new dimensions",
+        "Creating beautiful and functional interfaces that delight users",
     },
     {
       icon: Layers3,
-      title: "3D Modeling and Animations",
-      description:
-        "Crafting detailed 3D assets and bringing them to life through animation",
+      title: "User Experience",
+      description: "Crafting intuitive experiences that solve real problems",
     },
     {
-      icon: Brain,
-      title: "Augmented Reality",
-      description:
-        "Blending digital content seamlessly with the physical world",
+      icon: Palette,
+      title: "Creative Direction",
+      description: "Bringing ideas to life through thoughtful design decisions",
     },
   ];
 
