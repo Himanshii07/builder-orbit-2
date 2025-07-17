@@ -179,6 +179,20 @@ const InteractiveHero: React.FC = () => {
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           />
 
+          {/* Orbital elements */}
+          <motion.div
+            className="absolute inset-12"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+          >
+            <div className="relative w-full h-full">
+              <div className="absolute top-0 left-1/2 w-3 h-3 bg-xr-matrix/60 rounded-full transform -translate-x-1/2 shadow-lg shadow-xr-matrix/30" />
+              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-xr-void/60 rounded-full transform -translate-x-1/2 shadow-lg shadow-xr-void/30" />
+              <div className="absolute top-1/2 left-0 w-2.5 h-2.5 bg-xr-cyber/60 rounded-full transform -translate-y-1/2 shadow-lg shadow-xr-cyber/30" />
+              <div className="absolute top-1/2 right-0 w-2.5 h-2.5 bg-xr-neon/60 rounded-full transform -translate-y-1/2 shadow-lg shadow-xr-neon/30" />
+            </div>
+          </motion.div>
+
           {/* Avatar Container */}
           <motion.div
             className="absolute inset-8 rounded-full bg-gradient-to-br from-xr-neon/20 via-background to-xr-cyber/20 border border-xr-neon/50 flex items-center justify-center backdrop-blur-sm"
