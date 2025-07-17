@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InterestIllustrations from "@/components/InterestIllustrations";
-import ImageCarousel from "@/components/ImageCarousel";
+import PolaroidHero from "@/components/PolaroidHero";
+import HorizontalCarousel from "@/components/HorizontalCarousel";
 
 const About = () => {
   useEffect(() => {
