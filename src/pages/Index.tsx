@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Play, Eye, Zap, Layers3, Brain } from "lucide-react";
+import { ArrowRight, Eye, Layers3, Brain, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import InteractiveHero from "@/components/InteractiveHero";
+import MinimalistHero from "@/components/MinimalistHero";
 
 const Index = () => {
   useEffect(() => {
