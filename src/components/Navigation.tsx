@@ -38,13 +38,8 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-pulse-glow transition-all magnetic">
-                <span className="font-bold text-sm text-black animate-fade-in">
-                  HP
-                </span>
-              </div>
-              <span className="font-display font-bold text-lg text-foreground group-hover:text-xr-neon transition-colors animate-slide-in-left">
-                Himanshi Puri
+              <span className="font-display font-normal text-lg text-foreground transition-colors">
+                XR Designer
               </span>
             </Link>
 
@@ -57,18 +52,16 @@ const Navigation = () => {
                     key={item.path}
                     to={item.path}
                     className={cn(
-                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 group hover-scale animate-slide-in-right",
+                      "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200",
                       isActive
-                        ? "text-xr-neon"
+                        ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground",
-                      `stagger-${index + 1}`,
                     )}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent animate-shimmer" />
+                      <span className="absolute inset-x-0 -bottom-px h-px bg-foreground" />
                     )}
-                    <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-xr-neon to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
                   </Link>
                 );
               })}
@@ -105,7 +98,7 @@ const Navigation = () => {
                     className={cn(
                       "flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-all",
                       isActive
-                        ? "text-xr-neon bg-xr-neon/10"
+                        ? "text-foreground bg-muted"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent",
                     )}
                   >
