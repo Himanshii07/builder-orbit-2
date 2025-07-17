@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import InterestIllustrations from "@/components/InterestIllustrations";
 import PolaroidHero from "@/components/PolaroidHero";
 import HorizontalCarousel from "@/components/HorizontalCarousel";
+import IllustrationsSection from "@/components/IllustrationsSection";
 
 const About = () => {
   useEffect(() => {
