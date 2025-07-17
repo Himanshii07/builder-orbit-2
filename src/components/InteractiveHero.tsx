@@ -218,7 +218,13 @@ const InteractiveHero: React.FC = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <h3
-                      className={`text-lg font-bold text-${section.color} mb-2`}
+                      className={`text-lg font-bold mb-2 ${
+                        section.color === "xr-neon"
+                          ? "text-xr-neon"
+                          : section.color === "xr-cyber"
+                            ? "text-xr-cyber"
+                            : "text-xr-void"
+                      }`}
                     >
                       {section.title}
                     </h3>
