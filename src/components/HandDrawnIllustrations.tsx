@@ -2,9 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HandDrawnIllustrations: React.FC = () => {
+  const [hoveredIllustration, setHoveredIllustration] = React.useState<
+    string | null
+  >(null);
+
   const illustrations = [
     {
       name: "netflix",
+      message: "Binge-watching is my guilty pleasure!",
       svg: (
         <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
           <rect
