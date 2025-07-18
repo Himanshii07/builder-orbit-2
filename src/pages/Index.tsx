@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 import MinimalistHero from "@/components/MinimalistHero";
 import FlipCards from "@/components/FlipCards";
 import ValuesSection from "@/components/ValuesSection";
-import TangledBallAnimation from "@/components/TangledBallAnimation";
 
 const Index = () => {
   useEffect(() => {
@@ -92,7 +91,6 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-16">
             <div>
-              <TangledBallAnimation />
               <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
                 Untangling Problems Into Beautiful Solutions
               </h2>

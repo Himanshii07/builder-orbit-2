@@ -19,6 +19,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
+
       {/* Polaroid Hero Section */}
       <PolaroidHero />
 
