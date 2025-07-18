@@ -22,6 +22,7 @@ const About = () => {
 
       {/* Polaroid Hero Section */}
       <PolaroidHero />
+      
 
       {/* Life's Great Section - Image Carousel */}
       <section className="py-24 bg-background">

@@ -7,7 +7,7 @@ const MinimalistHero: React.FC = () => {
     <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden">
       {/* Dotted diary background */}
       <div
-        className="absolute inset-0 opacity-[0.08]"
+        className="absolute inset-0 opacity-[1.08]"
         style={{
           backgroundImage: `
             radial-gradient(circle at 1px 1px, hsl(var(--muted-foreground)) 0.5px, transparent 0)

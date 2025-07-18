@@ -33,12 +33,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 group mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-cyber-pulse transition-all">
-                <span className="font-bold text-black">HP</span>
+            <Link to="/" className="flex items-center space-x-0 group mb-4">
+              <div className="w-18 h-10 bg-gradient-to-r from-xr-neon to-xr-cyber rounded-lg flex items-center justify-center group-hover:animate-cyber-pulse transition-all">
+                <span className="font-bold text-black"></span>
               </div>
               <span className="font-display font-bold text-xl text-foreground group-hover:text-xr-neon transition-colors">
-                Himanshi Puri
+               XR Designer
               </span>
             </Link>
 

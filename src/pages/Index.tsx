@@ -111,7 +111,7 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-12xl mx-auto">
             {recentProjects.map((project, index) => {
               const colors = ["minimal-sage", "minimal-warm", "minimal-cool"];
               const currentColor = colors[index];

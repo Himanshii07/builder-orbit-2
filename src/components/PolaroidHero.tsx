@@ -22,7 +22,7 @@ const PolaroidHero: React.FC = () => {
               <div className="bg-white p-3 pb-16 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="aspect-square relative overflow-hidden bg-gray-100">
                   <img
-                    src="/placeholder.svg"
+                    src="/Photos/me.jpg"
                     alt="Himanshi profile"
                     className="w-full h-full object-cover"
                   />
@@ -31,7 +31,7 @@ const PolaroidHero: React.FC = () => {
                 {/* Polaroid bottom text space */}
                 <div className="mt-4 text-center">
                   <p className="text-gray-600 font-handwriting text-lg">
-                    hey, nice to meet you! ✨
+                    I am a pretty cool person! :)
                   </p>
                 </div>
               </div>

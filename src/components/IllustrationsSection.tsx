@@ -6,32 +6,32 @@ const IllustrationsSection: React.FC = () => {
     {
       id: 1,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Ff65df03c1ae94121ba01db30ec410ed3?format=webp&width=800",
-      title: "Digital Art 1",
+      title: "",
     },
     {
       id: 2,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fbb0c9fb0e17249baa3f46f3472da3f40?format=webp&width=800",
-      title: "Digital Art 2",
+      title: "",
     },
     {
       id: 3,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fc18dcab9917548469d723833a0e195c8?format=webp&width=800",
-      title: "Digital Art 3",
+      title: "",
     },
     {
       id: 4,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6658e5b7f3c542aa84e3836cac4ab3bd?format=webp&width=800",
-      title: "Digital Art 4",
+      title: "",
     },
     {
       id: 5,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Faa26438c10a145758ace0a70c8c8e288?format=webp&width=800",
-      title: "Digital Art 5",
+      title: "",
     },
     {
       id: 6,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Ff65df03c1ae94121ba01db30ec410ed3?format=webp&width=800",
-      title: "Digital Art 6",
+      title: "",
     },
   ];
 
