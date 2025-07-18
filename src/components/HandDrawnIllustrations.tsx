@@ -2,9 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HandDrawnIllustrations: React.FC = () => {
+  const [hoveredIllustration, setHoveredIllustration] = React.useState<
+    string | null
+  >(null);
+
   const illustrations = [
     {
       name: "netflix",
+      message: "Binge-watching is my guilty pleasure!",
       svg: (
         <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
           <rect
@@ -35,6 +40,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "chai",
+      message: "Chai is my fuel for creativity!",
       svg: (
         <svg width="35" height="40" viewBox="0 0 35 40" fill="none">
           <path
@@ -63,6 +69,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "rajma-chawal",
+      message: "Comfort food = creative mind!",
       svg: (
         <svg width="45" height="35" viewBox="0 0 45 35" fill="none">
           <ellipse
@@ -92,6 +99,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "dog",
+      message: "Dogs make everything better!",
       svg: (
         <svg width="50" height="40" viewBox="0 0 50 40" fill="none">
           <ellipse
@@ -156,6 +164,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "car",
+      message: "Road trips fuel my wanderlust!",
       svg: (
         <svg width="55" height="30" viewBox="0 0 55 30" fill="none">
           <path
@@ -207,6 +216,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "earphones",
+      message: "Music is my design companion!",
       svg: (
         <svg width="40" height="45" viewBox="0 0 40 45" fill="none">
           <path
@@ -252,6 +262,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "swings",
+      message: "Simple joys inspire great ideas!",
       svg: (
         <svg width="50" height="45" viewBox="0 0 50 45" fill="none">
           <path
@@ -305,6 +316,7 @@ const HandDrawnIllustrations: React.FC = () => {
     },
     {
       name: "travel",
+      message: "New places, fresh perspectives!",
       svg: (
         <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
           <rect
@@ -353,7 +365,7 @@ const HandDrawnIllustrations: React.FC = () => {
       {illustrations.map((illustration, index) => (
         <motion.div
           key={illustration.name}
-          className={`absolute ${illustration.color}`}
+          className={`absolute ${illustration.color} cursor-pointer`}
           style={illustration.position}
           initial={{ opacity: 0, scale: 0, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: Math.random() * 20 - 10 }}
@@ -363,6 +375,8 @@ const HandDrawnIllustrations: React.FC = () => {
             ease: "easeOut",
           }}
           whileHover={{ scale: 1.1, rotate: 0 }}
+          onHoverStart={() => setHoveredIllustration(illustration.name)}
+          onHoverEnd={() => setHoveredIllustration(null)}
         >
           <motion.div
             animate={{
@@ -379,6 +393,25 @@ const HandDrawnIllustrations: React.FC = () => {
           >
             {illustration.svg}
           </motion.div>
+
+          {/* Tooltip */}
+          {hoveredIllustration === illustration.name && (
+            <motion.div
+              className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-20"
+              initial={{ opacity: 0, y: -10, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="bg-background/90 backdrop-blur-sm border border-border rounded-lg px-3 py-2 shadow-lg whitespace-nowrap">
+                <p className="text-sm text-foreground font-light">
+                  {illustration.message}
+                </p>
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                  <div className="w-2 h-2 bg-background border-r border-b border-border rotate-45 transform translate-y-[-1px]"></div>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </motion.div>
       ))}
     </div>

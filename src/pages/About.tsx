@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import InterestIllustrations from "@/components/InterestIllustrations";
 import PolaroidHero from "@/components/PolaroidHero";
 import HorizontalCarousel from "@/components/HorizontalCarousel";
+import IllustrationsSection from "@/components/IllustrationsSection";
 
 const About = () => {
   useEffect(() => {
@@ -21,29 +22,6 @@ const About = () => {
       {/* Polaroid Hero Section */}
       <PolaroidHero />
 
-      {/* Interests Section */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-                Things I Love
-              </h2>
-              <p className="text-lg text-muted-foreground font-light">
-                The little things that inspire and fuel my creativity
-              </p>
-            </motion.div>
-
-            <InterestIllustrations />
-          </div>
-        </div>
-      </section>
-
       {/* Life's Great Section - Image Carousel */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -54,7 +32,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
                 Life's Great
               </h2>
               <p className="text-lg text-muted-foreground font-light">
@@ -83,7 +61,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-8">
                 A Little More About Me
               </h2>
 
@@ -133,46 +111,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
-              Let's Create Something Together
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed font-light">
-              Have an idea you'd like to explore? I'd love to hear about it and
-              see how we can bring it to life through thoughtful design.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-              >
-                <Link to="/contact">
-                  Start a Project
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-border text-foreground hover:bg-muted transition-all duration-300 rounded-full px-8 py-6 text-base font-normal"
-              >
-                <Link to="/projects">View My Work</Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Illustrations Section */}
+      <IllustrationsSection />
 
       <Footer />
     </div>

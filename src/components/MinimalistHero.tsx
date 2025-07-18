@@ -5,20 +5,20 @@ import HandDrawnIllustrations from "./HandDrawnIllustrations";
 const MinimalistHero: React.FC = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden">
-      {/* Dotted notebook background */}
+      {/* Dotted diary background */}
       <div
-        className="absolute inset-0 opacity-[0.15]"
+        className="absolute inset-0 opacity-[0.08]"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 2px 2px, hsl(var(--muted-foreground)) 1px, transparent 0),
-            linear-gradient(to bottom, transparent 23px, hsl(var(--muted-foreground)) 24px, hsl(var(--muted-foreground)) 25px, transparent 26px)
+            radial-gradient(circle at 1px 1px, hsl(var(--muted-foreground)) 0.5px, transparent 0)
           `,
-          backgroundSize: "24px 24px, 100% 24px",
+          backgroundSize: "20px 20px",
         }}
       />
 
-      {/* Red margin line */}
-      <div className="absolute left-16 top-0 bottom-0 w-px bg-red-300 opacity-40" />
+      {/* Subtle margin decoration */}
+      <div className="absolute left-12 top-0 bottom-0 w-px bg-red-200 opacity-30" />
+      <div className="absolute right-12 top-0 bottom-0 w-px bg-blue-200 opacity-20" />
 
       {/* Hand-drawn illustrations */}
       <HandDrawnIllustrations />
@@ -32,7 +32,7 @@ const MinimalistHero: React.FC = () => {
         >
           {/* Main heading */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mb-6 tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-heading text-foreground mb-6 tracking-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,7 +42,7 @@ const MinimalistHero: React.FC = () => {
 
           {/* Subtitle */}
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground mb-8 font-light tracking-wide"
+            className="text-lg md:text-xl text-muted-foreground mb-4 font-light tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

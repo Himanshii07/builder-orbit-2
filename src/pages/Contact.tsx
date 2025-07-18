@@ -142,7 +142,7 @@ This message was sent via himanshipuri.com contact form.
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-xr-neon bg-clip-text text-transparent animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-heading mb-6 text-foreground animate-fade-in">
               Get In Touch
             </h1>
 

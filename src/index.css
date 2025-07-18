@@ -96,6 +96,10 @@
     font-family: "Kalam", "Comic Sans MS", cursive;
     transform: rotate(-1deg);
   }
+
+  .font-heading {
+    font-family: "Caveat", cursive;
+  }
 }
 
 /* Clean Minimalist Animations */
