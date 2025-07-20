@@ -14,12 +14,12 @@ const HandDrawnIllustrations: React.FC = () => {
         <img
     src="/Photos/illustrations/netflix.png" // <-- Update with your actual path
     alt="Netflix Logo"
-    width={120}
-    height={250}
+    width={280}
+    height={350}
     className="object-contain"
   />
       ),
-      position: { top: "15%", left: "5%" },
+      position: { top: "5%", left: "54%" },
       color: "text-red-500",
     },
     {
@@ -34,7 +34,7 @@ const HandDrawnIllustrations: React.FC = () => {
            className="object-contain"
           />
       ),
-      position: { top: "28%", right: "18%" },
+      position: { top: "28%", right: "12%" },
       color: "text-amber-600",
     },
     {
@@ -42,14 +42,14 @@ const HandDrawnIllustrations: React.FC = () => {
       message: "Comfort food = creative mind!",
       svg: (
         <img
-           src="/Photos/illustrations/stocks.jpg" // <-- Update with your actual path
+           src="/Photos/illustrations/shares.png" // <-- Update with your actual path
            alt="Chai logo"
-           width={220}
-           height={480}
+           width={520}
+           height={680}
            className="object-contain"
           />
       ),
-      position: { top: "40%", left: "12%" },
+      position: { top: "30%", left: "12%" },
       color: "text-orange-600",
     },
     {
@@ -79,7 +79,7 @@ const HandDrawnIllustrations: React.FC = () => {
            className="object-contain"
           />
       ),
-      position: { top: "70%", left: "18%" },
+      position: { top: "54%", left: "8%" },
       color: "text-purple-600",
     },
     {

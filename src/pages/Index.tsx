@@ -61,7 +61,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Minimalist Hero Section */}
@@ -87,29 +87,27 @@ const Index = () => {
       <ValuesSection />
 
       {/* Recent Projects Preview */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
-                Untangling Problems Into Beautiful Solutions
-              </h2>
-              <p className="text-lg text-muted-foreground font-light">
-                A selection of projects I've worked on
-              </p>
-            </div>
+      <section className="py-24 bg-white/20">
+        <div className=" container mx-auto px-4">
+          <div className="mb-2 flex justify-center gap-1">
+                    <video
+                      src="/videos/ball.mp4" // Update this path
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="rounded-xl w-full max-w-2xl h-auto"
+                    />
+                  </div>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
+                 Untangling Problems Into Beautiful Solutions
+            </h2>
+               <p className="text-lg text-muted-foreground font-light">
+                  A selection of projects I've worked on
+               </p>
+           </div>
 
-            <Button
-              asChild
-              variant="outline"
-              className="border-border text-foreground hover:bg-muted transition-all duration-300 group rounded-full px-6"
-            >
-              <Link to="/projects">
-                View All
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-12xl mx-auto">
             {recentProjects.map((project, index) => {
