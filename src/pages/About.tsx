@@ -9,6 +9,7 @@ import InterestIllustrations from "@/components/InterestIllustrations";
 import PolaroidHero from "@/components/PolaroidHero";
 import HorizontalCarousel from "@/components/HorizontalCarousel";
 import IllustrationsSection from "@/components/IllustrationsSection";
+import TangledBallAnimation from "@/components/TangledBallAnimation";     
 
 const About = () => {
   useEffect(() => {
@@ -114,7 +115,10 @@ const About = () => {
       </section>
 
       {/* Illustrations Section */}
+      <TangledBallAnimation />
+      {/* Illustrations Section */}
       <IllustrationsSection />
+      
 
       <Footer />
     </div>

@@ -1,108 +1,87 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-const TangledBallAnimation: React.FC = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 3000);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
+const IllustrationsSection: React.FC = () => {
+  const illustrations = [
+    {
+      id: 1,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F29506901f9a14cdfa8cc7b62463ee073",
+      title: "",
+    },
+    {
+      id: 2,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F50adc434e31049d79a509a10717bf660",
+      title: "",
+    },
+    {
+      id: 3,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F6b9bb3f4d3344ce39d128234fa5b73f2",
+      title: "",
+    },
+    {
+      id: 4,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F258b3023d0684949b8fc35cd82843367",
+      title: "",
+    },
+    {
+      id: 5,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2Fd55672da890541db84622489103fb6f3",
+      title: "",
+    },
+    {
+      id: 6,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fba11606549344c80a96c94a6ca9cd3fd%2F7049955023fd41d1b62426938dd1b945",
+      title: "",
+    },
+  ];
 
   return (
-    <div className="flex items-center justify-center mb-8">
-      <motion.div
-        className="relative w-32 h-16"
-        initial={false}
-        animate={isAnimating ? "untangled" : "tangled"}
-      >
-        {/* Tangled ball state */}
-        <motion.svg
-          width="64"
-          height="64"
-          viewBox="0 0 64 64"
-          className="absolute left-0"
-          variants={{
-            tangled: { opacity: 1, scale: 1 },
-            untangled: { opacity: 0, scale: 0.8 },
-          }}
-          transition={{ duration: 1 }}
-        >
-          <motion.path
-            d="M32 8 Q20 12 16 24 Q20 36 32 32 Q44 28 48 16 Q44 4 32 8"
-            stroke="hsl(var(--foreground))"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="2 2"
-          />
-          <motion.path
-            d="M16 16 Q32 20 48 24 Q40 36 24 40 Q8 36 16 24 Q24 12 32 16"
-            stroke="hsl(var(--foreground))"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="3 1"
-          />
-          <motion.path
-            d="M24 8 Q40 16 56 24 Q48 40 32 48 Q16 40 24 24 Q32 8 48 16"
-            stroke="hsl(var(--foreground))"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="1 3"
-          />
-        </motion.svg>
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">
+              When I am not glued to my laptop
+            </h2>
+            <p className="text-lg text-muted-foreground font-light">
+              I try to explore places and capture art
+            </p>
+          </motion.div>
 
-        {/* Arrow */}
-        <motion.div
-          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          variants={{
-            tangled: { x: "-50%", opacity: 0 },
-            untangled: { x: "-50%", opacity: 1 },
-          }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M5 12h14M12 5l7 7-7 7"
-              stroke="hsl(var(--muted-foreground))"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </motion.div>
-
-        {/* Straight line state */}
-        <motion.svg
-          width="64"
-          height="64"
-          viewBox="0 0 64 64"
-          className="absolute right-0"
-          variants={{
-            tangled: { opacity: 0, scale: 0.8 },
-            untangled: { opacity: 1, scale: 1 },
-          }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <motion.line
-            x1="8"
-            y1="32"
-            x2="56"
-            y2="32"
-            stroke="hsl(var(--foreground))"
-            strokeWidth="3"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={isAnimating ? { pathLength: 1 } : { pathLength: 0 }}
-            transition={{ duration: 1, delay: 1.5 }}
-          />
-        </motion.svg>
-      </motion.div>
-    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {illustrations.map((illustration, index) => (
+              <motion.div
+                key={illustration.id}
+                className="group overflow-hidden rounded-2xl bg-card border border-border/50 hover:shadow-lg hover:shadow-black/5 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={illustration.src}
+                    alt={illustration.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-base font-normal text-foreground text-center">
+                    {illustration.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default TangledBallAnimation;
+export default IllustrationsSection;
